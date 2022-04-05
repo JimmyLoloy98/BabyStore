@@ -1,1 +1,15 @@
+/* Base */
 @import './base/reset';
+@import './base/base';
+
+/* Abstracts */
+@import './abstracts/variables';
+
+/* Components */  
+@import './components/search';
+@import './components/menu';
+@import './components/hero';
+
+/* Layout */
+@import './layout/header';
+@import './layout/products';

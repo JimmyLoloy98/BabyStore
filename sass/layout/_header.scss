@@ -1,0 +1,26 @@
+.background-header{
+  background-color: $pink-25;
+  // height: 100%;
+}
+
+.navbar-top{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.container-logo{
+  text-align: center;
+  position: relative;
+  top: -3rem;
+}
+.image-logo-brand{
+  width: 110px;
+}
+.container-list-nav{
+  display: flex;
+  justify-content: center;
+  gap: 1.4em;
+  align-items: center;
+  margin-top: 1rem;
+}

@@ -1,0 +1,28 @@
+.hero{
+  margin-top: 2rem;
+  height: 60vh;
+  
+  .hero-title{
+    font-size: 2rem;
+    width: 45%;
+    margin-bottom: 3rem;
+  }
+  
+  .hero-button{
+    border: none;
+    background-color: $pink-100;
+    border-radius: 0 0 20px 0;
+    padding: .8rem 1.25rem;
+    color: $white;
+    font-size: .875rem;
+    font-weight: 600;
+  }
+  
+  .hero-image{
+    position: absolute;
+    z-index: -999;
+    width: 60%;
+    top: 200px;
+    right: 4%;
+  }
+}
