@@ -41,19 +41,37 @@ a {
 
 .container-menu {
   z-index: 2; }
+  .container-menu .container-list-menu {
+    display: flex;
+    gap: 1.2em; }
 
-.container-list {
+/* Layout */
+#header .navbar-top {
   display: flex;
-  gap: 1.2em; }
+  justify-content: space-between;
+  margin-top: 2rem; }
 
-.hero {
+#header .container-logo {
+  text-align: center;
+  position: relative;
+  top: -3rem; }
+  #header .container-logo .image-logo-brand {
+    width: 110px; }
+  #header .container-logo .container-list-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1.4em;
+    align-items: center;
+    margin-top: 1rem; }
+
+#header .hero {
   margin-top: 2rem;
   height: 60vh; }
-  .hero .hero-title {
+  #header .hero .hero-title {
     font-size: 2rem;
     width: 45%;
     margin-bottom: 3rem; }
-  .hero .hero-button {
+  #header .hero .hero-button {
     border: none;
     background-color: #ea4d84;
     border-radius: 0 0 20px 0;
@@ -61,55 +79,85 @@ a {
     color: white;
     font-size: .875rem;
     font-weight: 600; }
-  .hero .hero-image {
+  #header .hero .hero-image {
     position: absolute;
     z-index: -999;
     width: 60%;
     top: 200px;
     right: 4%; }
 
-/* Layout */
 .background-header {
   background-color: #fffafb; }
 
-.navbar-top {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 2rem; }
+#featured-products {
+  margin-top: 5rem; }
+  #featured-products .products-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3rem; }
+    #featured-products .products-title .text-featured {
+      margin-left: .6rem; }
+  #featured-products .container-product-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    column-gap: 20px;
+    row-gap: 40px;
+    max-width: 100%; }
+    #featured-products .container-product-cards .card-item {
+      background-color: #fde8ee;
+      min-height: 380px; }
 
-.container-logo {
-  text-align: center;
-  position: relative;
-  top: -3rem; }
-
-.image-logo-brand {
-  width: 110px; }
-
-.container-list-nav {
-  display: flex;
-  justify-content: center;
-  gap: 1.4em;
-  align-items: center;
-  margin-top: 1rem; }
-
-.products-title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+#categories-products {
   margin-top: 5rem;
-  /* Estilo de prueba - ELIMINAR */
-  margin-bottom: 5rem; }
-
-.text-products-title {
-  margin-left: .6rem; }
-
-.container-product-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  column-gap: 20px;
-  row-gap: 40px;
-  max-width: 100%; }
-
-.card-item {
-  background-color: #fde8ee;
-  min-height: 380px; }
+  display: flex; }
+  #categories-products .container-aside-left {
+    height: 100vh;
+    width: 30%; }
+    #categories-products .container-aside-left .container-categories-list {
+      margin-top: 3.8rem;
+      height: 42%; }
+      #categories-products .container-aside-left .container-categories-list .categories-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: -40px; }
+        #categories-products .container-aside-left .container-categories-list .categories-list .categories-list-item {
+          display: flex;
+          align-items: center;
+          column-gap: 14px;
+          row-gap: 50px;
+          margin-bottom: 1rem; }
+    #categories-products .container-aside-left .container-elephant-image {
+      display: flex;
+      height: 58%;
+      justify-content: center; }
+      #categories-products .container-aside-left .container-elephant-image .elephant-image {
+        justify-content: center; }
+  #categories-products .container-aside-right {
+    width: 70%; }
+    #categories-products .container-aside-right .container-header-accesories {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid #4a4a4a; }
+      #categories-products .container-aside-right .container-header-accesories .container-accesories-title {
+        display: flex;
+        align-items: center; }
+        #categories-products .container-aside-right .container-header-accesories .container-accesories-title .text-accesories {
+          margin-left: 1rem; }
+      #categories-products .container-aside-right .container-header-accesories .text-link-accesories {
+        display: flex;
+        align-items: center;
+        color: #ea4d84;
+        font-size: small; }
+    #categories-products .container-aside-right .container-accesories-cards {
+      margin-top: 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      column-gap: 16px;
+      row-gap: 32px;
+      max-width: 100%; }
+      #categories-products .container-aside-right .container-accesories-cards .card-item-accesories {
+        background-color: #fde8ee;
+        min-height: 320px; }
