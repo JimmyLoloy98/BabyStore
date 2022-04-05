@@ -1,0 +1,80 @@
+#categories-products{
+  margin-top: 5rem;
+  display: flex;
+
+  .container-aside-left{
+    height: 100vh;
+    width: 30%;
+
+    .container-categories-list{
+      margin-top: 3.8rem;
+      height: 42%;
+
+      .categories-list{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: -40px;
+
+        .categories-list-item{
+          display: flex;
+          align-items: center;
+          column-gap: 14px;
+          row-gap: 50px;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+
+    .container-elephant-image{
+      display: flex;
+      height: 58%;
+      justify-content: center;
+    
+      .elephant-image{
+        justify-content: center;
+      }
+    }
+  }
+
+  .container-aside-right{
+    width: 70%;
+
+    .container-header-accesories{
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid $gray-100;
+
+      .container-accesories-title{
+        display: flex;
+        align-items: center;
+
+        .text-accesories{
+          margin-left: 1rem;
+        }
+      }
+
+      .text-link-accesories{
+        display: flex;
+        align-items: center;
+        color: $pink-100;
+        font-size: small;
+      }
+    }
+
+    .container-accesories-cards{
+      margin-top: 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px,1fr));
+      column-gap: 16px;
+      row-gap: 32px;
+      max-width: 100%;
+    
+      .card-item-accesories{
+        background-color: $pink-50;
+        min-height: 320px;
+      }
+    }
+  }
+}
