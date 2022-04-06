@@ -45,6 +45,58 @@ a {
     display: flex;
     gap: 1.2em; }
 
+.card-header {
+  position: relative;
+  display: block;
+  width: 100%;
+  border-radius: calc(var(--curve) * 1px);
+  overflow: hidden;
+  text-decoration: none; }
+  .card-header .card-image {
+    width: 100%;
+    height: auto; }
+  .card-header .card-button {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    border-radius: 20px 0 0 0;
+    background-color: #fffafb;
+    border: none;
+    padding: 0.6rem;
+    width: 100%;
+    /* Animation with hover */
+    transform: translateY(100%);
+    transition: .2s ease-in-out; }
+    .card-header .card-button p {
+      font-size: 1.25rem;
+      color: #4a4a4a;
+      margin-left: .8rem; }
+
+.card-item:hover .card-button {
+  transform: translateY(0); }
+
+.card-description {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-end;
+  background-color: #fff;
+  margin-top: 1.5rem;
+  border-radius: 0.25rem;
+  width: 100%; }
+  .card-description h3 {
+    font-size: 1.25rem;
+    font-weight: 600; }
+  .card-description p {
+    margin-top: 1rem;
+    font-size: 1.25rem;
+    font-weight: 600; }
+
 /* Layout */
 #header .navbar-top {
   display: flex;
@@ -105,8 +157,10 @@ a {
     row-gap: 40px;
     max-width: 100%; }
     #featured-products .container-product-cards .card-item {
-      background-color: #fde8ee;
-      min-height: 380px; }
+      box-shadow: 0.25rem 0.25rem 0.8rem rgba(0, 0, 0, 0.3);
+      background-color: white;
+      min-height: 360px;
+      padding: .5rem; }
 
 #categories-products {
   margin-top: 5rem;
