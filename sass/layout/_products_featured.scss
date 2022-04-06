@@ -20,8 +20,11 @@
     max-width: 100%;
     
     .card-item{
-      background-color: $pink-50;
-      min-height: 380px;
+      box-shadow: .25rem .25rem .8rem rgba(0,0,0,0.3);
+      background-color: $white;
+      min-height: 360px;
+      padding: .5rem;
+
     }
   }
 }
