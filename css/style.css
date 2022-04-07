@@ -138,51 +138,58 @@ button {
     font-weight: 600; }
 
 /* Layout */
-#header .navbar-top {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 2rem; }
-
-#header .container-logo {
-  text-align: center;
-  position: relative;
-  top: -3rem; }
-  #header .container-logo .image-logo-brand {
-    width: 110px; }
-  #header .container-logo .container-list-nav {
+#header {
+  min-height: 36rem;
+  max-height: 75vh; }
+  #header .navbar-top {
     display: flex;
-    justify-content: center;
-    gap: 1.4em;
-    align-items: center;
-    margin-top: 1rem; }
-
-#header .hero {
-  margin-top: 2rem;
-  height: 60vh; }
-  #header .hero .hero-title {
-    font-size: 2rem;
-    width: 45%;
-    margin-bottom: 3rem; }
-  #header .hero .hero-button {
-    border: none;
-    background-color: #ea4d84;
-    border-radius: 0 0 20px 0;
-    padding: .8rem 1.25rem;
-    color: white;
-    font-size: .875rem;
-    font-weight: 600; }
-  #header .hero .hero-image {
-    position: absolute;
-    z-index: -999;
-    width: 60%;
-    top: 200px;
-    right: 4%; }
+    justify-content: space-between;
+    margin-top: 2rem; }
+  #header .container-logo {
+    text-align: center;
+    position: relative;
+    top: -3rem; }
+    #header .container-logo .image-logo-brand {
+      width: 110px; }
+    #header .container-logo .container-list-nav {
+      display: flex;
+      justify-content: center;
+      gap: 1.4em;
+      align-items: center;
+      margin-top: 1rem; }
+  #header .hero {
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2.5rem; }
+    #header .hero .hero-text {
+      display: flex;
+      flex-direction: column;
+      width: 50%; }
+      #header .hero .hero-text .hero-title {
+        font-size: 2rem;
+        font-weight: 600; }
+      #header .hero .hero-text .hero-button {
+        border: none;
+        background-color: #ea4d84;
+        border-radius: 0 0 20px 0;
+        padding: .8rem 1.25rem;
+        color: white;
+        font-size: .875rem;
+        font-weight: 600;
+        margin-top: 3rem;
+        width: 10rem; }
+    #header .hero .hero-image {
+      max-height: 20rem;
+      position: absolute;
+      z-index: -999;
+      right: 3rem; }
 
 .background-header {
   background-color: #fffafb; }
 
 #featured-products {
-  margin-top: 5rem; }
+  margin-top: 3rem; }
   #featured-products .products-title {
     display: flex;
     align-items: center;

@@ -1,4 +1,6 @@
 #header{
+  min-height: 36rem;
+  max-height: 75vh;
 
   .navbar-top{
     display: flex;
@@ -25,31 +27,39 @@
   }
 
   .hero{
-    margin-top: 2rem;
-    height: 60vh;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2.5rem;
     
-    .hero-title{
-      font-size: 2rem;
-      width: 45%;
-      margin-bottom: 3rem;
-    }
-    
-    .hero-button{
-      border: none;
-      background-color: $pink-100;
-      border-radius: 0 0 20px 0;
-      padding: .8rem 1.25rem;
-      color: $white;
-      font-size: .875rem;
-      font-weight: 600;
+    .hero-text{
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      
+      .hero-title{
+        font-size: 2rem;
+        font-weight: 600;
+      }
+      
+      .hero-button{
+        border: none;
+        background-color: $pink-100;
+        border-radius: 0 0 20px 0;
+        padding: .8rem 1.25rem;
+        color: $white;
+        font-size: .875rem;
+        font-weight: 600;
+        margin-top: 3rem;
+        width: 10rem;
+      }
     }
     
     .hero-image{
+      max-height: 20rem;
       position: absolute;
       z-index: -999;
-      width: 60%;
-      top: 200px;
-      right: 4%;
+      right: 3rem;
     }
   }
 }
