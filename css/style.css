@@ -15,6 +15,9 @@ a {
   text-decoration: none;
   color: #000; }
 
+button {
+  font-family: 'Comfortaa', cursive; }
+
 ::placeholder {
   font-family: 'Comfortaa', cursive; }
 
@@ -109,6 +112,31 @@ a {
     font-size: 1.25rem;
     font-weight: 600; }
 
+.card-description h3 {
+  font-size: 1.25rem;
+  font-weight: 600; }
+
+.card-description span {
+  margin-top: 1rem; }
+
+.card-description .card-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.25rem; }
+  .card-description .card-footer span {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: auto 0; }
+  .card-description .card-footer button {
+    border: none;
+    background-color: #ea4d84;
+    cursor: pointer;
+    border-radius: 0 0 20px 0;
+    padding: .5rem 1.50rem;
+    color: white;
+    font-size: .875rem;
+    font-weight: 600; }
+
 /* Layout */
 #header .navbar-top {
   display: flex;
@@ -188,7 +216,8 @@ a {
         width: 19%; }
       #categories-products .container-aside-left .categories-title p {
         z-index: 1;
-        padding-top: 1rem; }
+        padding-top: 1rem;
+        text-align: center; }
     #categories-products .container-aside-left .container-categories-list {
       margin-top: 3.8rem;
       height: 42%; }
@@ -205,10 +234,8 @@ a {
           margin-bottom: 1rem; }
     #categories-products .container-aside-left .container-elephant-image {
       display: flex;
-      height: 58%;
+      height: 54%;
       justify-content: center; }
-      #categories-products .container-aside-left .container-elephant-image .elephant-image {
-        justify-content: center; }
   #categories-products .container-aside-right {
     width: 70%; }
     #categories-products .container-aside-right .container-header-accesories {
@@ -234,5 +261,7 @@ a {
       row-gap: 32px;
       max-width: 100%; }
       #categories-products .container-aside-right .container-accesories-cards .card-item-accesories {
-        background-color: #fde8ee;
+        background-color: white;
+        box-shadow: 0.1rem 0.1rem 0.6rem rgba(0, 0, 0, 0.1), -0.1rem -0.1rem 0.6rem rgba(0, 0, 0, 0.1);
+        padding: .5rem;
         min-height: 320px; }
