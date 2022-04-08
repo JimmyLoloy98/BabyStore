@@ -23,6 +23,14 @@
       gap: 1.4em;
       align-items: center;
       margin-top: 1rem;
+
+      a:hover{
+        color: $pink-100;
+      }
+
+      a:focus{
+        color: $pink-100;
+      }
     }
   }
 
@@ -63,6 +71,7 @@
     }
   }
 }
+
 .background-header{
   background-color: $pink-25;
 }

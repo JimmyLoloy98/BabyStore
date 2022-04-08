@@ -157,6 +157,10 @@ button {
       gap: 1.4em;
       align-items: center;
       margin-top: 1rem; }
+      #header .container-logo .container-list-nav a:hover {
+        color: #ea4d84; }
+      #header .container-logo .container-list-nav a:focus {
+        color: #ea4d84; }
   #header .hero {
     height: auto;
     display: flex;
@@ -270,7 +274,7 @@ button {
     #categories-products .container-aside-right .container-accesories-cards {
       margin-top: 2rem;
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
       column-gap: 16px;
       row-gap: 32px;
       max-width: 100%; }
@@ -278,4 +282,4 @@ button {
         background-color: white;
         box-shadow: 0.1rem 0.1rem 0.6rem rgba(0, 0, 0, 0.1), -0.1rem -0.1rem 0.6rem rgba(0, 0, 0, 0.1);
         padding: .5rem;
-        min-height: 320px; }
+        min-height: 350px; }
