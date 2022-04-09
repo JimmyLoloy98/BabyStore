@@ -24,7 +24,7 @@ button {
 /* Abstracts */
 /* Primary color */
 /* Typographys */
-/* Components */
+/* Modules */
 .container-search {
   z-index: 2;
   width: 16rem;
@@ -48,96 +48,8 @@ button {
     display: flex;
     gap: 1.2em; }
 
-.card-header {
-  position: relative;
-  display: block;
-  width: 100%;
-  border-radius: calc(var(--curve) * 1px);
-  overflow: hidden;
-  text-decoration: none; }
-  .card-header .card-image {
-    width: 100%;
-    height: auto; }
-  .card-header .card-heart-icon {
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin-top: 15px;
-    margin-right: 15px;
-    border: none;
-    background-color: transparent;
-    cursor: pointer; }
-    .card-header .card-heart-icon svg:hover {
-      fill: #ea4d84;
-      transition: 250ms; }
-  .card-header .card-button {
-    display: flex;
-    align-items: center;
-    justify-content: end;
-    cursor: pointer;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 1;
-    border-radius: 20px 0 0 0;
-    background-color: #fffafb;
-    border: none;
-    padding: 0.6rem;
-    width: 100%;
-    /* Animation with hover */
-    transform: translateY(100%);
-    transition: .2s ease-in-out; }
-    .card-header .card-button p {
-      font-size: 1.25rem;
-      color: #4a4a4a;
-      margin-left: .8rem; }
-
-.card-item:hover .card-button {
-  transform: translateY(0); }
-
-.card-description {
-  display: flex;
-  flex-direction: column;
-  align-content: flex-end;
-  background-color: #fff;
-  margin-top: 1.5rem;
-  border-radius: 0.25rem;
-  width: 100%; }
-  .card-description h3 {
-    font-size: 1.25rem;
-    font-weight: 600; }
-  .card-description p {
-    margin-top: 1rem;
-    font-size: 1.25rem;
-    font-weight: 600; }
-
-.card-description h3 {
-  font-size: 1.25rem;
-  font-weight: 600; }
-
-.card-description span {
-  margin-top: 1rem; }
-
-.card-description .card-footer {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 1.25rem; }
-  .card-description .card-footer span {
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin: auto 0; }
-  .card-description .card-footer button {
-    border: none;
-    background-color: #ea4d84;
-    cursor: pointer;
-    border-radius: 0 0 20px 0;
-    padding: .5rem 1.50rem;
-    color: white;
-    font-size: .875rem;
-    font-weight: 600; }
-
 /* Layout */
+@use '../modules/nav_menu';
 #header {
   min-height: 36rem;
   max-height: 75vh; }
@@ -192,6 +104,7 @@ button {
 .background-header {
   background-color: #fffafb; }
 
+@use '../modules/card';
 #featured-products {
   margin-top: 3rem; }
   #featured-products .products-title {
@@ -212,7 +125,69 @@ button {
       background-color: white;
       min-height: 360px;
       padding: .5rem; }
+      #featured-products .container-product-cards .card-item .card-header {
+        position: relative;
+        display: block;
+        width: 100%;
+        border-radius: calc(var(--curve) * 1px);
+        overflow: hidden;
+        text-decoration: none; }
+        #featured-products .container-product-cards .card-item .card-header .card-image {
+          width: 100%;
+          height: auto; }
+        #featured-products .container-product-cards .card-item .card-header .card-heart-icon {
+          position: absolute;
+          top: 0;
+          right: 0;
+          margin-top: 15px;
+          margin-right: 15px;
+          border: none;
+          background-color: transparent;
+          cursor: pointer; }
+          #featured-products .container-product-cards .card-item .card-header .card-heart-icon svg:hover {
+            fill: #ea4d84;
+            transition: 250ms; }
+        #featured-products .container-product-cards .card-item .card-header .card-button {
+          display: flex;
+          align-items: center;
+          justify-content: end;
+          cursor: pointer;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          z-index: 1;
+          border-radius: 20px 0 0 0;
+          background-color: #fffafb;
+          border: none;
+          padding: 0.6rem;
+          width: 100%;
+          /* Animation with hover */
+          transform: translateY(100%);
+          transition: .2s ease-in-out; }
+          #featured-products .container-product-cards .card-item .card-header .card-button p {
+            font-size: 1.25rem;
+            color: #4a4a4a;
+            margin-left: .8rem; }
+      #featured-products .container-product-cards .card-item .card-description {
+        display: flex;
+        flex-direction: column;
+        align-content: flex-end;
+        background-color: #fff;
+        margin-top: 1.5rem;
+        border-radius: 0.25rem;
+        width: 100%; }
+        #featured-products .container-product-cards .card-item .card-description h3 {
+          font-size: 1.25rem;
+          font-weight: 600; }
+        #featured-products .container-product-cards .card-item .card-description p {
+          margin-top: 1rem;
+          font-size: 1.25rem;
+          font-weight: 600; }
+    #featured-products .container-product-cards .card-item:hover .card-button {
+      transform: translateY(0); }
 
+@use '../modules/card2';
 #categories-products {
   margin-top: 5rem;
   display: flex; }
@@ -283,3 +258,99 @@ button {
         box-shadow: 0.1rem 0.1rem 0.6rem rgba(0, 0, 0, 0.1), -0.1rem -0.1rem 0.6rem rgba(0, 0, 0, 0.1);
         padding: .5rem;
         min-height: 350px; }
+        #categories-products .container-aside-right .container-accesories-cards .card-item-accesories .card-header {
+          position: relative;
+          display: block;
+          width: 100%;
+          border-radius: calc(var(--curve) * 1px);
+          overflow: hidden;
+          text-decoration: none; }
+          #categories-products .container-aside-right .container-accesories-cards .card-item-accesories .card-header .card-image {
+            width: 100%;
+            height: auto; }
+          #categories-products .container-aside-right .container-accesories-cards .card-item-accesories .card-header .card-heart-icon {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin-top: 15px;
+            margin-right: 15px;
+            border: none;
+            background-color: transparent;
+            cursor: pointer; }
+            #categories-products .container-aside-right .container-accesories-cards .card-item-accesories .card-header .card-heart-icon svg:hover {
+              fill: #ea4d84;
+              transition: 250ms; }
+          #categories-products .container-aside-right .container-accesories-cards .card-item-accesories .card-header .card-button {
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            cursor: pointer;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 1;
+            border-radius: 20px 0 0 0;
+            background-color: #fffafb;
+            border: none;
+            padding: 0.6rem;
+            width: 100%;
+            /* Animation with hover */
+            transform: translateY(100%);
+            transition: .2s ease-in-out; }
+            #categories-products .container-aside-right .container-accesories-cards .card-item-accesories .card-header .card-button p {
+              font-size: 1.25rem;
+              color: #4a4a4a;
+              margin-left: .8rem; }
+        #categories-products .container-aside-right .container-accesories-cards .card-item-accesories .card-description {
+          flex-direction: column;
+          align-content: flex-end;
+          background-color: #fff;
+          margin-top: 1.5rem;
+          border-radius: 0.25rem;
+          width: 100%; }
+          #categories-products .container-aside-right .container-accesories-cards .card-item-accesories .card-description h3 {
+            font-size: 1.25rem;
+            font-weight: 600; }
+          #categories-products .container-aside-right .container-accesories-cards .card-item-accesories .card-description span {
+            margin-top: 1rem; }
+          #categories-products .container-aside-right .container-accesories-cards .card-item-accesories .card-description .card-footer {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1.25rem; }
+            #categories-products .container-aside-right .container-accesories-cards .card-item-accesories .card-description .card-footer span {
+              font-size: 1.25rem;
+              font-weight: 600;
+              margin: auto 0; }
+            #categories-products .container-aside-right .container-accesories-cards .card-item-accesories .card-description .card-footer button {
+              border: none;
+              background-color: #ea4d84;
+              cursor: pointer;
+              border-radius: 0 0 20px 0;
+              padding: .5rem 1.50rem;
+              color: white;
+              font-size: .875rem;
+              font-weight: 600; }
+
+@use '../modules/nav_menu';
+.navbar .navbar-top {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem; }
+
+.navbar .container-logo {
+  text-align: center;
+  position: relative;
+  top: -3rem; }
+  .navbar .container-logo .image-logo-brand {
+    width: 110px; }
+  .navbar .container-logo .container-list-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1.4em;
+    align-items: center;
+    margin-top: 1rem; }
+    .navbar .container-logo .container-list-nav a:hover {
+      color: #ea4d84; }
+    .navbar .container-logo .container-list-nav a:focus {
+      color: #ea4d84; }

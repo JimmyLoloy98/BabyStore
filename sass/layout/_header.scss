@@ -1,38 +1,10 @@
+@use '../modules/nav_menu';
+
 #header{
   min-height: 36rem;
   max-height: 75vh;
 
-  .navbar-top{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 2rem;
-  }
-
-  .container-logo{
-    text-align: center;
-    position: relative;
-    top: -3rem;
-
-    .image-logo-brand{
-      width: 110px;
-    }
-
-    .container-list-nav{
-      display: flex;
-      justify-content: center;
-      gap: 1.4em;
-      align-items: center;
-      margin-top: 1rem;
-
-      a:hover{
-        color: $pink-100;
-      }
-
-      a:focus{
-        color: $pink-100;
-      }
-    }
-  }
+  @include nav_menu;
 
   .hero{
     height: auto;

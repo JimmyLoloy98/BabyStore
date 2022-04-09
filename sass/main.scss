@@ -5,13 +5,15 @@
 /* Abstracts */
 @import './abstracts/variables';
 
-/* Components */  
-@import './components/search';
-@import './components/menu';
-@import './components/card';
-@import './components/card2';
+/* Modules */  
+@import './modules/nav_menu';
+@import './modules/search';
+@import './modules/menu';
+@import './modules/card';
+@import './modules/card2';
 
 /* Layout */
 @import './layout/header';
 @import './layout/products_featured';
 @import './layout/products_categories';
+@import './layout/_all_products';
