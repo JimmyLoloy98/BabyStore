@@ -1,0 +1,29 @@
+@mixin circle($bg-color: $gray-50){
+  border-radius: 50%;
+  padding: .5rem;
+  background-color: $bg-color;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+@mixin paginator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .6rem;
+  margin-top: 2rem;
+
+  .circle-step{
+    @include circle($pink-100);
+  }
+
+  .circle-page{
+    @include circle($gray-50);
+  }
+}

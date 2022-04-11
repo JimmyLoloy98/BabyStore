@@ -1,0 +1,10 @@
+@use '../modules/nav_menu';
+@use '../modules/pagination';
+
+.navbar{
+  @include nav_menu;
+}
+
+#pagination{
+  @include paginator;
+}
