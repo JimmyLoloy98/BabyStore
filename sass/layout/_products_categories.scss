@@ -1,5 +1,14 @@
 @use '../modules/card2';
 
+@mixin grid(){
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px,1fr));
+  column-gap: 16px;
+  row-gap: 32px;
+  max-width: 100%;
+}
+
 #categories-products{
   margin-top: 5rem;
   display: flex;
@@ -93,12 +102,7 @@
     }
 
     .container-accesories-cards{
-      margin-top: 2rem;
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(240px,1fr));
-      column-gap: 16px;
-      row-gap: 32px;
-      max-width: 100%;
+      @include grid();
 
       @include card2;
     }
