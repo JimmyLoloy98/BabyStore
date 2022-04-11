@@ -333,6 +333,7 @@ button {
               font-weight: 600; }
 
 @use '../modules/nav_menu';
+@use '../modules/pagination';
 .navbar .navbar-top {
   display: flex;
   justify-content: space-between;
@@ -354,3 +355,34 @@ button {
       color: #ea4d84; }
     .navbar .container-logo .container-list-nav a:focus {
       color: #ea4d84; }
+
+#pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .6rem;
+  margin-top: 2rem; }
+  #pagination .circle-step {
+    border-radius: 50%;
+    padding: .5rem;
+    background-color: #ea4d84;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border: none;
+    cursor: pointer; }
+  #pagination .circle-page {
+    border-radius: 50%;
+    padding: .5rem;
+    background-color: #c9c9c9;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border: none;
+    cursor: pointer; }
