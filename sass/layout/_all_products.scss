@@ -5,6 +5,10 @@
   @include nav_menu;
 }
 
+.all-products{
+  margin-top: 1rem !important;
+}
+
 #pagination{
   @include paginator;
 }

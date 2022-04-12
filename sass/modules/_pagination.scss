@@ -17,7 +17,8 @@
   justify-content: center;
   align-items: center;
   gap: .6rem;
-  margin-top: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
 
   .circle-step{
     @include circle($pink-100);
