@@ -21,6 +21,13 @@ button {
   background-color: transparent;
   cursor: pointer; }
 
+input {
+  outline: none;
+  border: none; }
+
+textarea {
+  outline: none; }
+
 ::placeholder {
   font-family: 'Comfortaa', cursive; }
 
@@ -569,3 +576,191 @@ button {
           color: white;
           font-size: .875rem;
           font-weight: 600; }
+
+@use './modules/cta_whatsapp';
+.hero-about {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%; }
+  .hero-about .header-left {
+    background-color: #fffafb;
+    padding: 1.6rem 2.5rem;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    box-shadow: 0.1rem 0.1rem 0.6rem rgba(0, 0, 0, 0.1), -0.1rem -0.1rem 0.6rem rgba(0, 0, 0, 0.1); }
+    .hero-about .header-left p {
+      margin-top: .8rem;
+      font-size: 0.8rem; }
+  .hero-about .header-right {
+    width: 30%;
+    background-color: #fde8ee;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    box-shadow: 0.1rem 0.1rem 0.6rem rgba(0, 0, 0, 0.1), -0.1rem -0.1rem 0.6rem rgba(0, 0, 0, 0.1); }
+    .hero-about .header-right img {
+      width: 90%; }
+
+.contact-about {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem; }
+  .contact-about .contact-left {
+    padding: 1.6rem 2.5rem;
+    width: 70%; }
+    .contact-about .contact-left h3 {
+      padding-bottom: .8rem;
+      border-bottom: 1px solid #4a4a4a; }
+    .contact-about .contact-left .info-contact {
+      margin-top: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem; }
+      .contact-about .contact-left .info-contact div {
+        display: flex;
+        align-items: center;
+        gap: .6rem; }
+  .contact-about .contact-right {
+    width: 30%;
+    height: 40%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 1.6rem; }
+    .contact-about .contact-right img {
+      width: 5em; }
+    .contact-about .contact-right div {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; }
+      .contact-about .contact-right div .whatsapp-button {
+        border: none;
+        background-color: #ea4d84;
+        border-radius: 0 0 20px 0;
+        padding: .8rem 1.25rem;
+        color: white;
+        font-size: .875rem;
+        font-weight: 600;
+        width: 10rem; }
+
+@use './modules/cta_whatsapp';
+#hero-contact {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%; }
+  #hero-contact .contact-form {
+    padding: 1.6rem 1rem;
+    width: 50%;
+    background-color: #fffafb;
+    box-shadow: 0.1rem 0.1rem 0.6rem rgba(0, 0, 0, 0.1), -0.1rem -0.1rem 0.6rem rgba(0, 0, 0, 0.1); }
+    #hero-contact .contact-form h3 {
+      padding-bottom: 1rem;
+      border-bottom: 1px solid #4a4a4a; }
+    #hero-contact .contact-form .container-form {
+      display: flex;
+      gap: 1rem;
+      width: 100%; }
+      #hero-contact .contact-form .container-form form {
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly; }
+        #hero-contact .contact-form .container-form form div {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          padding: .7rem;
+          border: 1px solid #4a4a4a;
+          border-radius: 20px; }
+          #hero-contact .contact-form .container-form form div input {
+            font-size: .875rem;
+            width: 86%; }
+      #hero-contact .contact-form .container-form .container-image {
+        width: 30%;
+        display: flex; }
+        #hero-contact .contact-form .container-form .container-image img {
+          width: 100%; }
+    #hero-contact .contact-form textarea {
+      width: 100%;
+      padding: .8rem;
+      border: 1px solid #4a4a4a;
+      border-radius: 20px;
+      font-size: .875rem; }
+  #hero-contact .contact-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1.6rem 1rem;
+    width: 50%;
+    background-color: #fde8ee;
+    box-shadow: 0.1rem 0.1rem 0.6rem rgba(0, 0, 0, 0.1), -0.1rem -0.1rem 0.6rem rgba(0, 0, 0, 0.1); }
+    #hero-contact .contact-details .contact-title {
+      padding-bottom: .8rem;
+      border-bottom: 1px solid #4a4a4a; }
+    #hero-contact .contact-details .contact-items {
+      margin-top: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem; }
+      #hero-contact .contact-details .contact-items div {
+        display: flex;
+        align-items: center;
+        gap: .6rem; }
+    #hero-contact .contact-details .info-brand {
+      width: 57%;
+      height: auto;
+      display: flex;
+      justify-content: space-evenly;
+      margin-top: 1.6rem; }
+      #hero-contact .contact-details .info-brand img {
+        width: 5em; }
+      #hero-contact .contact-details .info-brand div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly; }
+        #hero-contact .contact-details .info-brand div .whatsapp-button {
+          border: none;
+          background-color: #ea4d84;
+          border-radius: 0 0 20px 0;
+          padding: .8rem 1.25rem;
+          color: white;
+          font-size: .875rem;
+          font-weight: 600;
+          width: 10rem; }
+    #hero-contact .contact-details .divider {
+      margin-top: 1.8rem;
+      border-top: 1px solid #4a4a4a;
+      width: 100%; }
+    #hero-contact .contact-details .contact-whatsapp {
+      width: 50%;
+      height: auto;
+      display: flex;
+      justify-content: space-evenly;
+      margin-top: 1.6rem; }
+      #hero-contact .contact-details .contact-whatsapp img {
+        width: 5em; }
+      #hero-contact .contact-details .contact-whatsapp div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; }
+        #hero-contact .contact-details .contact-whatsapp div .whatsapp-button {
+          border: none;
+          background-color: #ea4d84;
+          border-radius: 0 0 20px 0;
+          padding: .8rem 1.25rem;
+          color: white;
+          font-size: .875rem;
+          font-weight: 600;
+          width: 10rem; }
+
+#maps-api {
+  width: 100%;
+  height: 30rem;
+  margin-top: 3rem;
+  background-color: #e6e6e6;
+  box-shadow: 0.1rem 0.1rem 0.6rem rgba(0, 0, 0, 0.1), -0.1rem -0.1rem 0.6rem rgba(0, 0, 0, 0.1); }
