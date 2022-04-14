@@ -1,0 +1,115 @@
+@use './modules/cta_whatsapp';
+
+#hero-contact{
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+
+  .contact-form{
+    padding: 1.6rem 1rem;
+    width: 50%;
+    background-color: $pink-25;
+    box-shadow: .1rem .1rem .6rem rgba(0,0,0,0.1), -.1rem -.1rem .6rem rgba(0,0,0,0.1);
+
+    h3{
+      padding-bottom: 1rem;
+      border-bottom: 1px solid $gray-100;
+    }
+  
+    .container-form{
+      display: flex;
+      // flex-wrap: wrap;
+      gap: 1rem;
+      width: 100%;
+
+      form{
+        width: 70%;
+        display: flex;
+        flex-direction: column;justify-content: space-evenly;
+
+        div{
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          padding: .7rem;
+          border: 1px solid $gray-100;
+          border-radius: 20px;
+
+          input{
+            font-size: .875rem;
+            width: 86%;
+          }
+        }
+      }
+
+      .container-image{
+        width: 30%;
+        display: flex;
+
+        img{
+          width: 100%;
+        }
+      }
+    }
+
+    textarea{
+      width: 100%;
+      padding: .8rem;
+      border: 1px solid $gray-100;
+      border-radius: 20px;
+      font-size: .875rem;
+    }
+  }
+
+  .contact-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1.6rem 1rem;
+    width: 50%;
+    background-color: $pink-50;
+    box-shadow: .1rem .1rem .6rem rgba(0,0,0,0.1), -.1rem -.1rem .6rem rgba(0,0,0,0.1);
+
+    .contact-title{
+      padding-bottom: .8rem;
+      border-bottom: 1px solid $gray-100;
+    }
+
+    .contact-items{
+      margin-top: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      div{
+        display: flex;
+        align-items: center;
+        gap: .6rem;
+      }
+    }
+
+    .info-brand{
+      @include cta_whatsapp(57%, auto, space-evenly);
+    }
+
+    .divider{
+      margin-top: 1.8rem;
+      border-top: 1px solid $gray-100;
+      width: 100%;
+    }
+
+    .contact-whatsapp{
+      @include cta_whatsapp(50%, auto, space-between);
+    }
+  }
+}
+
+#maps-api{
+  width: 100%;
+  height: 30rem;
+  margin-top: 3rem;
+  background-color: $gray-25;
+  box-shadow: .1rem .1rem .6rem rgba(0,0,0,0.1), -.1rem -.1rem .6rem rgba(0,0,0,0.1);
+}
