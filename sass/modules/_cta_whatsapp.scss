@@ -1,0 +1,28 @@
+@mixin cta-whatsapp($width: 30%, $height: 40%, $space: space-between){
+  width: $width;
+  height: $height;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 1.6rem;
+
+  img{
+    width: 5em;
+  }
+
+  div{
+    display: flex;
+    flex-direction: column;
+    justify-content: $space;
+    
+    .whatsapp-button{
+      border: none;
+      background-color: $pink-100;
+      border-radius: 0 0 20px 0;
+      padding: .8rem 1.25rem;
+      color: $white;
+      font-size: .875rem;
+      font-weight: 600;
+      width: 10rem;
+    }
+  }
+}
