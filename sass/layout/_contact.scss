@@ -20,7 +20,6 @@
   
     .container-form{
       display: flex;
-      // flex-wrap: wrap;
       gap: 1rem;
       width: 100%;
 
@@ -60,6 +59,23 @@
       border: 1px solid $gray-100;
       border-radius: 20px;
       font-size: .875rem;
+    }
+
+    .container-form-button{
+      width: 100%;
+      margin-top: .8rem;
+      display: flex;
+      justify-content: flex-end;
+
+      .form-button{
+        background-color: $pink-100;
+        border-radius: 0 0 20px 0;
+        padding: .8rem 1.25rem;
+        color: $white;
+        font-size: .875rem;
+        font-weight: 600;
+        width: 10em;
+      }
     }
   }
 

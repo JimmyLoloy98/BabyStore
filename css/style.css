@@ -690,6 +690,19 @@ textarea {
       border: 1px solid #4a4a4a;
       border-radius: 20px;
       font-size: .875rem; }
+    #hero-contact .contact-form .container-form-button {
+      width: 100%;
+      margin-top: .8rem;
+      display: flex;
+      justify-content: flex-end; }
+      #hero-contact .contact-form .container-form-button .form-button {
+        background-color: #ea4d84;
+        border-radius: 0 0 20px 0;
+        padding: .8rem 1.25rem;
+        color: white;
+        font-size: .875rem;
+        font-weight: 600;
+        width: 10em; }
   #hero-contact .contact-details {
     display: flex;
     flex-direction: column;
