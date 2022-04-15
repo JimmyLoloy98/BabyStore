@@ -1,0 +1,120 @@
+@mixin cart_dialog {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  right: 0;
+  background-color: white;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+
+  .closebtn {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    font-size: 32px;
+    padding: .5rem;
+  }
+}
+
+@mixin item_product{
+  display: flex;
+  gap: .8rem;
+  width: 100%;
+  border-top: 1px solid $gray-100;
+  border-bottom: 1px solid $gray-100;
+  font-weight: bold;
+
+  img{
+    width: 18%;
+    box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .right-description{
+    width: 82%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    .title-product-item{
+      text-transform: uppercase;
+    }
+
+    .footer-description{
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
+.sidenav {
+  @include cart_dialog;
+
+  .item_product {
+    transition: 0.3s;
+    padding: 1rem 3rem 1rem 2rem;
+    text-decoration: none;
+    color: $gray-100;
+    display: block;
+
+    @include item_product;
+
+  }
+
+  .header-product-items{
+    display: flex;
+    justify-content: start;
+    margin-left: 2rem;
+    position: absolute;
+    top: 1rem;
+    width:86%;
+
+    span{
+      display: flex;
+      align-items: center;
+
+      svg{
+        width: 18px;
+        margin-right: .6rem;
+      }
+    }
+  }
+  
+  .container-cart-button{
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    bottom: 1rem;
+    width: 100%;
+    margin-top: 1.5rem;
+    
+    .cart_button{
+      background-color: $pink-100;
+      border-radius: 0 0 20px 0;
+      padding: .4rem 1rem;
+      color: $white;
+      font-size: .875rem;
+      font-weight: 600;
+      width: 90%;
+      display: flex;
+      justify-content: space-between;
+
+      span{
+        display: flex;
+        align-items: center;
+
+        svg{
+          width: 18px;
+          margin-right: .6rem;
+        }
+      }
+      
+      p{
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}
