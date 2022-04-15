@@ -637,7 +637,6 @@ textarea {
       flex-direction: column;
       justify-content: space-between; }
       .contact-about .contact-right div .whatsapp-button {
-        border: none;
         background-color: #ea4d84;
         border-radius: 0 0 20px 0;
         padding: .8rem 1.25rem;
@@ -724,7 +723,6 @@ textarea {
         flex-direction: column;
         justify-content: space-evenly; }
         #hero-contact .contact-details .info-brand div .whatsapp-button {
-          border: none;
           background-color: #ea4d84;
           border-radius: 0 0 20px 0;
           padding: .8rem 1.25rem;
@@ -749,7 +747,6 @@ textarea {
         flex-direction: column;
         justify-content: space-between; }
         #hero-contact .contact-details .contact-whatsapp div .whatsapp-button {
-          border: none;
           background-color: #ea4d84;
           border-radius: 0 0 20px 0;
           padding: .8rem 1.25rem;
@@ -764,3 +761,85 @@ textarea {
   margin-top: 3rem;
   background-color: #e6e6e6;
   box-shadow: 0.1rem 0.1rem 0.6rem rgba(0, 0, 0, 0.1), -0.1rem -0.1rem 0.6rem rgba(0, 0, 0, 0.1); }
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  right: 0;
+  background-color: white;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px; }
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    font-size: 32px;
+    padding: .5rem; }
+  .sidenav .item_product {
+    transition: 0.3s;
+    padding: 1rem 3rem 1rem 2rem;
+    text-decoration: none;
+    color: #4a4a4a;
+    display: block;
+    display: flex;
+    gap: .8rem;
+    width: 100%;
+    border-top: 1px solid #4a4a4a;
+    border-bottom: 1px solid #4a4a4a;
+    font-weight: bold; }
+    .sidenav .item_product img {
+      width: 18%;
+      box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.2); }
+    .sidenav .item_product .right-description {
+      width: 82%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around; }
+      .sidenav .item_product .right-description .title-product-item {
+        text-transform: uppercase; }
+      .sidenav .item_product .right-description .footer-description {
+        display: flex;
+        justify-content: space-between; }
+  .sidenav .header-product-items {
+    display: flex;
+    justify-content: start;
+    margin-left: 2rem;
+    position: absolute;
+    top: 1rem;
+    width: 86%; }
+    .sidenav .header-product-items span {
+      display: flex;
+      align-items: center; }
+      .sidenav .header-product-items span svg {
+        width: 18px;
+        margin-right: .6rem; }
+  .sidenav .container-cart-button {
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    bottom: 1rem;
+    width: 100%;
+    margin-top: 1.5rem; }
+    .sidenav .container-cart-button .cart_button {
+      background-color: #ea4d84;
+      border-radius: 0 0 20px 0;
+      padding: .4rem 1rem;
+      color: white;
+      font-size: .875rem;
+      font-weight: 600;
+      width: 90%;
+      display: flex;
+      justify-content: space-between; }
+      .sidenav .container-cart-button .cart_button span {
+        display: flex;
+        align-items: center; }
+        .sidenav .container-cart-button .cart_button span svg {
+          width: 18px;
+          margin-right: .6rem; }
+      .sidenav .container-cart-button .cart_button p {
+        display: flex;
+        align-items: center; }
