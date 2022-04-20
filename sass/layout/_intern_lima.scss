@@ -1,0 +1,89 @@
+@use '../modules/nav_menu';
+@use '../modules/input_form';
+@use '../modules/flex_container';
+
+main{
+  @include nav_menu;
+}
+
+.left-container-pay{
+
+  .wrapper-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1rem;
+    margin-bottom: 1.2rem;
+    border-bottom: 1px solid $gray-75;
+
+    > span{
+      display: flex;
+      align-items: center;
+
+      > button{
+        background-color: $pink-100;
+        border-radius: 0 0 20px 0;
+        padding: .8rem 1.5rem;
+        color: $white;
+        font-size: .875rem;
+        font-weight: 600;
+        margin-left: 1rem
+      }
+    };
+  }
+
+  .wrapper-inputs{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 1.2rem;
+    column-gap: 3em;
+
+    .container-input{
+      @include input_form;
+    }
+  }
+
+  .container-input-reference{
+    margin-top: 1rem;
+    @include input_form;
+  }
+}
+
+.right-container-pay{
+
+  .header{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid $gray-75;
+  }
+
+  .product-items{
+    
+    > div{
+      margin: 1.4rem 0;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  
+  .subtotal-items{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    border-top: 1px solid $gray-75;
+    border-bottom: 1px solid $gray-75;
+  }
+
+  .ship-lima{
+    padding-bottom: 1.6rem;
+  }
+
+  .total-items{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    border-top: 1px solid $gray-75;
+  }
+}
