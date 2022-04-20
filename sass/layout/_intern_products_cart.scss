@@ -43,6 +43,24 @@ main{
     }
   }
 
+  .wrapper-contact{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    > span{
+      display: flex;
+      align-items: center;
+      > img{
+        width: 22px;
+        margin-right: .4rem;
+      }
+      > a{
+        color: $pink-100;
+      }
+    }
+  }
+
   .container-input-reference{
     margin-top: 1rem;
     @include input_form;
