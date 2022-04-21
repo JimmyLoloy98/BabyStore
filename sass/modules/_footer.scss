@@ -1,6 +1,7 @@
 @mixin footer{
-  margin-top: 10rem;
-  padding: 2.5rem 5rem 1rem 5rem;
+  margin: 10rem 3rem 0 3rem;
+  margin-top: 11rem;
+  padding: 3rem 5rem 1rem 5rem;
   background-color: $pink-50;
   position: relative;
   bottom: 4rem;
@@ -91,6 +92,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 3rem;
+    padding-top: 2rem;
+  }
+
+  @media screen and (max-width: 768px){
+    footer{
+      margin: 0 1rem;
+    }
   }
 }

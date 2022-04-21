@@ -107,14 +107,23 @@ main{
   }
 }
 
-footer{
-  @include footer;
-}
 
-/* .bg-footer{
-  position: absolute;
+
+.bg-footer{
+  position: relative;
   bottom: 0;
   width: 100%;
-  height: 10%;
-  background-color: $gray-100;
-} */
+  height: 20%;
+  background-color: $pink-100;
+  
+  footer{
+    @include footer;
+  }
+  
+  .whatsapp-chat{
+    z-index: 999;
+    position: absolute;
+    bottom: 320px;
+    right: 3rem;
+  }
+}

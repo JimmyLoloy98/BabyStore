@@ -9,6 +9,10 @@ html {
   font-family: 'Comfortaa', cursive; }
 
 body {
+  padding: 0;
+  margin: 0; }
+
+.body {
   padding: 0 3rem; }
 
 a {
@@ -32,6 +36,12 @@ textarea {
 
 ::placeholder {
   font-family: 'Comfortaa', cursive; }
+
+@media screen and (max-width: 768px) {
+  .body {
+    padding: 0 1rem; }
+  footer {
+    margin: 0 1rem; } }
 
 /* Abstracts */
 /* Primary color */
@@ -690,78 +700,86 @@ main .container-logo {
   padding-bottom: 2rem;
   border-top: 1px solid #8f8f8f; }
 
-footer {
-  margin-top: 10rem;
-  padding: 2.5rem 5rem 1rem 5rem;
-  background-color: #fde8ee;
+.bg-footer {
   position: relative;
-  bottom: 4rem; }
-  footer .wrapper-content-footer {
-    display: flex;
-    justify-content: space-between;
-    gap: 1rem; }
-    footer .wrapper-content-footer .contact {
+  bottom: 0;
+  width: 100%;
+  height: 20%;
+  background-color: #ea4d84; }
+  .bg-footer footer {
+    margin: 10rem 3rem 0 3rem;
+    margin-top: 11rem;
+    padding: 3rem 5rem 1rem 5rem;
+    background-color: #fde8ee;
+    position: relative;
+    bottom: 4rem; }
+    .bg-footer footer .wrapper-content-footer {
       display: flex;
-      flex-direction: column;
+      justify-content: space-between;
       gap: 1rem; }
-      footer .wrapper-content-footer .contact a {
+      .bg-footer footer .wrapper-content-footer .contact {
         display: flex;
-        align-items: center; }
-        footer .wrapper-content-footer .contact a img {
-          width: 22px; }
-        footer .wrapper-content-footer .contact a p {
-          margin-left: .6rem;
-          font-size: .85em; }
-    footer .wrapper-content-footer .delivery .top {
-      display: flex;
-      align-items: flex-start; }
-      footer .wrapper-content-footer .delivery .top span {
-        margin-left: .8rem; }
-        footer .wrapper-content-footer .delivery .top span .cover {
-          font-size: .8em;
-          margin-top: .3rem; }
-        footer .wrapper-content-footer .delivery .top span button {
+        flex-direction: column;
+        gap: 1rem; }
+        .bg-footer footer .wrapper-content-footer .contact a {
+          display: flex;
+          align-items: center; }
+          .bg-footer footer .wrapper-content-footer .contact a img {
+            width: 22px; }
+          .bg-footer footer .wrapper-content-footer .contact a p {
+            margin-left: .6rem;
+            font-size: .85em; }
+      .bg-footer footer .wrapper-content-footer .delivery .top {
+        display: flex;
+        align-items: flex-start; }
+        .bg-footer footer .wrapper-content-footer .delivery .top span {
+          margin-left: .8rem; }
+          .bg-footer footer .wrapper-content-footer .delivery .top span .cover {
+            font-size: .8em;
+            margin-top: .3rem; }
+          .bg-footer footer .wrapper-content-footer .delivery .top span button {
+            background-color: #ea4d84;
+            border-radius: 0 0 20px 0;
+            padding: .4rem 1.2rem;
+            color: white;
+            margin-top: .6rem; }
+      .bg-footer footer .wrapper-content-footer .delivery .bottom {
+        margin-top: 1.8rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem; }
+        .bg-footer footer .wrapper-content-footer .delivery .bottom li {
+          list-style: disc;
+          font-size: .85em;
+          margin-left: -1rem; }
+      .bg-footer footer .wrapper-content-footer .suscribe {
+        display: flex;
+        flex-direction: column; }
+        .bg-footer footer .wrapper-content-footer .suscribe > input {
+          margin-top: .8rem;
+          margin-bottom: .6rem;
+          padding: .4rem 0;
+          border-bottom: 2px solid #8f8f8f; }
+        .bg-footer footer .wrapper-content-footer .suscribe > button {
+          align-self: flex-end;
           background-color: #ea4d84;
           border-radius: 0 0 20px 0;
           padding: .4rem 1.2rem;
-          color: white;
-          margin-top: .6rem; }
-    footer .wrapper-content-footer .delivery .bottom {
-      margin-top: 1.8rem;
+          color: white; }
+    .bg-footer footer .legal {
       display: flex;
-      flex-direction: column;
-      gap: 1rem; }
-      footer .wrapper-content-footer .delivery .bottom li {
-        list-style: disc;
-        font-size: .85em;
-        margin-left: -1rem; }
-    footer .wrapper-content-footer .suscribe {
-      display: flex;
-      flex-direction: column; }
-      footer .wrapper-content-footer .suscribe > input {
-        margin-top: .8rem;
-        margin-bottom: .6rem;
-        padding: .4rem 0;
-        border-bottom: 2px solid #8f8f8f; }
-      footer .wrapper-content-footer .suscribe > button {
-        align-self: flex-end;
-        background-color: #ea4d84;
-        border-radius: 0 0 20px 0;
-        padding: .4rem 1.2rem;
-        color: white; }
-  footer .legal {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 3rem; }
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 2rem; }
+    @media screen and (max-width: 768px) {
+      .bg-footer footer footer {
+        margin: 0 1rem; } }
+  .bg-footer .whatsapp-chat {
+    z-index: 999;
+    position: absolute;
+    bottom: 320px;
+    right: 3rem; }
 
-/* .bg-footer{
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 10%;
-  background-color: $gray-100;
-} */
 @use './modules/cta_whatsapp';
 .hero-about {
   display: flex;

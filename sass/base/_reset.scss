@@ -4,12 +4,14 @@
   padding-top: 0;
   list-style: none;
 }
-
 html{
   font-family: 'Comfortaa', cursive;
 }
-
 body{
+  padding: 0;
+  margin: 0;
+}
+.body{
   padding: 0 3rem;
 }
 a{
@@ -33,4 +35,13 @@ textarea{
 }
 ::placeholder{
   font-family: 'Comfortaa', cursive;
+}
+
+@media screen and (max-width: 768px){
+  .body{
+    padding: 0 1rem;
+  }
+  footer{
+    margin: 0 1rem;
+  }
 }
