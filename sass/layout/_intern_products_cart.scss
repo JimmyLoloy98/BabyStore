@@ -1,6 +1,7 @@
 @use '../modules/nav_menu';
 @use '../modules/input_form';
 @use '../modules/flex_container';
+@use '../modules/footer';
 
 main{
   @include nav_menu;
@@ -105,3 +106,15 @@ main{
     border-top: 1px solid $gray-75;
   }
 }
+
+footer{
+  @include footer;
+}
+
+/* .bg-footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 10%;
+  background-color: $gray-100;
+} */

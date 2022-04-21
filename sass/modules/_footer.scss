@@ -1,0 +1,96 @@
+@mixin footer{
+  margin-top: 10rem;
+  padding: 2.5rem 5rem 1rem 5rem;
+  background-color: $pink-50;
+  position: relative;
+  bottom: 4rem;
+
+  .wrapper-content-footer{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+
+    .contact{
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      a{
+        display: flex;
+        align-items: center;
+
+        img{
+          width: 22px;
+        }
+
+        p{
+          margin-left: .6rem;
+          font-size: .85em;
+        }
+      }
+    }
+
+    .delivery{
+      .top{
+        display: flex;
+        align-items: flex-start;
+        span{
+          margin-left: .8rem;
+
+          .cover{
+            font-size: .8em;
+            margin-top: .3rem
+          }
+
+          button{
+            background-color: $pink-100;
+            border-radius: 0 0 20px 0;
+            padding: .4rem 1.2rem;
+            color: $white;
+            margin-top: .6rem
+          }
+        }
+      }
+
+      .bottom{
+        margin-top: 1.8rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        
+        li{
+          list-style: disc;
+          font-size: .85em;
+          margin-left: -1rem;
+        }
+      }
+    }
+
+    .suscribe{
+      display: flex;
+      flex-direction: column;
+
+      > input{
+        margin-top: .8rem;
+        margin-bottom: .6rem;
+        padding: .4rem 0;
+        border-bottom: 2px solid $gray-75;
+      }
+
+      > button{
+        align-self: flex-end;
+        background-color: $pink-100;
+        border-radius: 0 0 20px 0;
+        padding: .4rem 1.2rem;
+        color: $white;
+      }
+    }
+  }
+
+  .legal{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 3rem;
+  }
+}
