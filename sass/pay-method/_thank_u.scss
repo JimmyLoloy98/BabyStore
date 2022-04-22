@@ -1,0 +1,26 @@
+.conteiner{
+    text-align: center;
+}
+.text{
+    font-size:  2.4rem;
+    font-family: 'Comfortaa', cursive;
+}
+.button{
+    background-color: $pink-100;
+    border-radius: 0 0 1.3rem 0;
+    width: 10%;
+    border: none;
+    margin-left: 45%;
+    color: $white;
+    font-family: 'Comfortaa', cursive;
+    .button-sub{
+        background-color: $pink-100;
+        border: none;
+        color: $white;
+        text-align: center;
+        font-size: 1.2rem;
+        border-radius: 0 0 1.3rem 0;
+        padding: 0.1rem 0.1rem;
+    }
+    
+}

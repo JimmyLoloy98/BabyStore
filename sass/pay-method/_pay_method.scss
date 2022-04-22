@@ -1,0 +1,115 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'comtarnaa', cursive;
+}
+section {
+    width: 56rem;
+    height: auto;
+    background: $pink-25;
+    float: left;  
+}
+.form {
+    width: 60%;
+    background: $pink-25;
+	padding: 0.2rem 1rem 9rem;
+    margin-right: 1.7rem;
+    margin-left: 3.5rem;
+    margin-top: 26.25rem;
+	border-radius: 0rem;
+    box-sizing: content-box; 
+    color: $black;   /*Color de las letras*/   
+    float: left;
+    box-shadow: 0.1rem 0.01rem 0.01rem 0.3rem rgba(1, 1, 1, 0.1);
+    .form p {
+        font-size: 1.3rem;
+        /*margin-bottom: 25rem;*/
+        color: $black;
+        text-align: left;
+        margin: 0.8rem;
+        height: 1.8rem;	
+    }
+}
+.container-items{
+    display: flex;
+    justify-content: space-between;
+    margin: 0.2rem 0;
+    .container-items span{
+        display: flex;
+        align-items: flex-start;
+    }
+}
+.contenedor-2{
+    width: 100%;
+    display: flex;
+    padding: 0.38rem 0.5rem;
+    align-items: center;
+    border-radius: 2rem;
+    margin-bottom: 14px;
+      .one{
+          width: 3rem;
+          height: 3rem;
+      }
+  }
+input[type="radio"] {
+        /*margin-right: .5rem;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;*/
+        width: 1.2rem;
+        height: 3.3rem;
+        padding: 0;
+}
+.radio[type="radio"]:checked {
+          background-color: $pink-100;
+        }
+.conteiner1{
+    padding-right: 1rem;
+    width: 50%;
+    float: left;
+    .contenedor-1{
+        width: 100%;
+        display: flex;
+        padding: 0.38rem 0.5rem;
+        align-items: center;
+        border-radius: 2rem;
+        border: 1px solid $gray-75;
+        margin-bottom: 14px;
+        .controls {
+            background: $pink-25;
+            padding: 0.7rem;
+            font-size: 1.2rem;
+            width: 98%;
+            margin-left: 0.6em;
+            border: none;
+            .two{
+                width: 1.6rem;
+                margin-left: 1rem;
+            }
+        }
+    }
+}
+input{
+    outline: none;  
+}
+.form a {
+    color: $black;
+    text-decoration: none;
+}
+.conteiner2{
+    padding-left: 1rem;
+    width: 50%;
+    float: left;
+}
+.Yape {
+    margin-top: 1rem;
+    height: 3rem;
+    text-align: left;
+    font-size: 1.3rem;
+}
+.banco {
+    height: 3rem;
+    text-align: left;
+    font-size: 1.3rem;
+}
