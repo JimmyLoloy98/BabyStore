@@ -2,7 +2,6 @@
 
 #header{
   min-height: 36rem;
-  max-height: 75vh;
 
   @include nav_menu;
 
@@ -11,7 +10,7 @@
     display: flex;
     justify-content: space-between;
     margin-top: 2.5rem;
-    
+
     .hero-text{
       display: flex;
       flex-direction: column;
@@ -36,7 +35,7 @@
     }
     
     .hero-image{
-      max-height: 20rem;
+      max-height: 41%;
       position: absolute;
       z-index: -999;
       right: 3rem;
@@ -44,6 +43,42 @@
   }
 }
 
-.background-header{
-  background-color: $pink-25;
+@include mobile{
+  #header{
+    margin-bottom: 3rem;
+    .hero{
+      margin-top: 0;
+      display: block;
+      width: 100%;
+      text-align: center;
+
+      .hero-text{
+        width: 100%;
+        padding: 0 5%;
+        align-items: center;
+        margin-top: 2rem;
+        
+        .hero-title{
+          font-size: $font-medium;
+        }
+
+        .hero-button{
+          margin-top: 1.5rem;
+        }
+      }
+
+      .hero-image{
+        margin-top: 1rem;
+        max-height: none;
+        position: static;
+        display: block;
+        width: 100%;
+      }
+    }
+  }
 }
+
+// .background-header{
+//   background-color: $pink-25;
+//   height: 70vh;
+// }

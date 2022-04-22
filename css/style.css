@@ -49,7 +49,7 @@ textarea {
 /* Modules */
 .container-search {
   z-index: 2;
-  width: 16rem;
+  width: 16em;
   display: flex;
   padding: .6em 1em;
   align-items: center;
@@ -59,25 +59,46 @@ textarea {
     width: 90%;
     margin-left: .5em; }
 
-.container-menu {
-  z-index: 2; }
-  .container-menu .container-list-menu {
-    display: flex;
-    gap: 1.2em; }
+@media screen and (max-width: 568px) {
+  .container-search {
+    display: none; } }
 
 /* Layout */
 @use '../modules/nav_menu';
 #header {
-  min-height: 36rem;
-  max-height: 75vh; }
+  min-height: 36rem; }
   #header .navbar-top {
     display: flex;
     justify-content: space-between;
     margin-top: 2rem; }
+    #header .navbar-top .container-menu {
+      z-index: 2; }
+      #header .navbar-top .container-menu .container-list-menu {
+        display: flex;
+        gap: 1.2em; }
+        #header .navbar-top .container-menu .container-list-menu .icon-white {
+          display: none; }
+        #header .navbar-top .container-menu .container-list-menu .name {
+          display: none; }
+        #header .navbar-top .container-menu .container-list-menu .link-menu {
+          height: auto;
+          display: flex;
+          align-items: flex-start; }
+          #header .navbar-top .container-menu .container-list-menu .link-menu .sup {
+            position: relative;
+            left: -6px;
+            color: white;
+            background-color: #ea4d84;
+            padding: .3rem;
+            font-size: .6rem;
+            border-radius: 50%;
+            text-align: start; }
   #header .container-logo {
     text-align: center;
     position: relative;
     top: -3rem; }
+    #header .container-logo > button {
+      display: none; }
     #header .container-logo .image-logo-brand {
       width: 110px; }
     #header .container-logo .container-list-nav {
@@ -90,6 +111,56 @@ textarea {
         color: #ea4d84; }
       #header .container-logo .container-list-nav a:focus {
         color: #ea4d84; }
+  @media screen and (max-width: 568px) {
+    #header .navbar-top .container-menu {
+      width: 100%; }
+      #header .navbar-top .container-menu .container-list-menu {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        text-align: center;
+        margin-top: 0; }
+        #header .navbar-top .container-menu .container-list-menu .link-menu {
+          height: auto;
+          display: flex;
+          align-items: flex-start; }
+          #header .navbar-top .container-menu .container-list-menu .link-menu .sup {
+            position: relative;
+            left: -6px;
+            color: white;
+            background-color: #ea4d84;
+            padding: .3rem;
+            font-size: .6rem;
+            border-radius: 50%;
+            text-align: start; }
+        #header .navbar-top .container-menu .container-list-menu .menu-profile {
+          width: 140px;
+          background-color: #ea4d84;
+          border-radius: 20px; }
+          #header .navbar-top .container-menu .container-list-menu .menu-profile > a {
+            position: relative;
+            top: 2px;
+            left: 2px;
+            display: flex;
+            align-items: center; }
+            #header .navbar-top .container-menu .container-list-menu .menu-profile > a .icon-gray {
+              display: none; }
+            #header .navbar-top .container-menu .container-list-menu .menu-profile > a .icon-white {
+              display: block; }
+            #header .navbar-top .container-menu .container-list-menu .menu-profile > a .name {
+              display: block;
+              color: white;
+              margin-left: 1rem; }
+    #header .container-logo {
+      position: static;
+      margin-top: 1.5rem; }
+      #header .container-logo > button {
+        display: inline-flex;
+        position: absolute;
+        top: 135px;
+        left: 14px; }
+      #header .container-logo .container-list-nav {
+        display: none; } }
   #header .hero {
     height: auto;
     display: flex;
@@ -113,13 +184,34 @@ textarea {
         margin-top: 3rem;
         width: 10rem; }
     #header .hero .hero-image {
-      max-height: 20rem;
+      max-height: 41%;
       position: absolute;
       z-index: -999;
       right: 3rem; }
 
-.background-header {
-  background-color: #fffafb; }
+@media screen and (max-width: 568px) {
+  #header {
+    margin-bottom: 3rem; }
+    #header .hero {
+      margin-top: 0;
+      display: block;
+      width: 100%;
+      text-align: center; }
+      #header .hero .hero-text {
+        width: 100%;
+        padding: 0 5%;
+        align-items: center;
+        margin-top: 2rem; }
+        #header .hero .hero-text .hero-title {
+          font-size: 1.2rem; }
+        #header .hero .hero-text .hero-button {
+          margin-top: 1.5rem; }
+      #header .hero .hero-image {
+        margin-top: 1rem;
+        max-height: none;
+        position: static;
+        display: block;
+        width: 100%; } }
 
 @use '../modules/card';
 #featured-products {
@@ -353,11 +445,35 @@ textarea {
   display: flex;
   justify-content: space-between;
   margin-top: 2rem; }
+  .navbar .navbar-top .container-menu {
+    z-index: 2; }
+    .navbar .navbar-top .container-menu .container-list-menu {
+      display: flex;
+      gap: 1.2em; }
+      .navbar .navbar-top .container-menu .container-list-menu .icon-white {
+        display: none; }
+      .navbar .navbar-top .container-menu .container-list-menu .name {
+        display: none; }
+      .navbar .navbar-top .container-menu .container-list-menu .link-menu {
+        height: auto;
+        display: flex;
+        align-items: flex-start; }
+        .navbar .navbar-top .container-menu .container-list-menu .link-menu .sup {
+          position: relative;
+          left: -6px;
+          color: white;
+          background-color: #ea4d84;
+          padding: .3rem;
+          font-size: .6rem;
+          border-radius: 50%;
+          text-align: start; }
 
 .navbar .container-logo {
   text-align: center;
   position: relative;
   top: -3rem; }
+  .navbar .container-logo > button {
+    display: none; }
   .navbar .container-logo .image-logo-brand {
     width: 110px; }
   .navbar .container-logo .container-list-nav {
@@ -370,6 +486,57 @@ textarea {
       color: #ea4d84; }
     .navbar .container-logo .container-list-nav a:focus {
       color: #ea4d84; }
+
+@media screen and (max-width: 568px) {
+  .navbar .navbar-top .container-menu {
+    width: 100%; }
+    .navbar .navbar-top .container-menu .container-list-menu {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      text-align: center;
+      margin-top: 0; }
+      .navbar .navbar-top .container-menu .container-list-menu .link-menu {
+        height: auto;
+        display: flex;
+        align-items: flex-start; }
+        .navbar .navbar-top .container-menu .container-list-menu .link-menu .sup {
+          position: relative;
+          left: -6px;
+          color: white;
+          background-color: #ea4d84;
+          padding: .3rem;
+          font-size: .6rem;
+          border-radius: 50%;
+          text-align: start; }
+      .navbar .navbar-top .container-menu .container-list-menu .menu-profile {
+        width: 140px;
+        background-color: #ea4d84;
+        border-radius: 20px; }
+        .navbar .navbar-top .container-menu .container-list-menu .menu-profile > a {
+          position: relative;
+          top: 2px;
+          left: 2px;
+          display: flex;
+          align-items: center; }
+          .navbar .navbar-top .container-menu .container-list-menu .menu-profile > a .icon-gray {
+            display: none; }
+          .navbar .navbar-top .container-menu .container-list-menu .menu-profile > a .icon-white {
+            display: block; }
+          .navbar .navbar-top .container-menu .container-list-menu .menu-profile > a .name {
+            display: block;
+            color: white;
+            margin-left: 1rem; }
+  .navbar .container-logo {
+    position: static;
+    margin-top: 1.5rem; }
+    .navbar .container-logo > button {
+      display: inline-flex;
+      position: absolute;
+      top: 135px;
+      left: 14px; }
+    .navbar .container-logo .container-list-nav {
+      display: none; } }
 
 .all-products {
   margin-top: 1rem !important; }
@@ -588,11 +755,35 @@ main .navbar-top {
   display: flex;
   justify-content: space-between;
   margin-top: 2rem; }
+  main .navbar-top .container-menu {
+    z-index: 2; }
+    main .navbar-top .container-menu .container-list-menu {
+      display: flex;
+      gap: 1.2em; }
+      main .navbar-top .container-menu .container-list-menu .icon-white {
+        display: none; }
+      main .navbar-top .container-menu .container-list-menu .name {
+        display: none; }
+      main .navbar-top .container-menu .container-list-menu .link-menu {
+        height: auto;
+        display: flex;
+        align-items: flex-start; }
+        main .navbar-top .container-menu .container-list-menu .link-menu .sup {
+          position: relative;
+          left: -6px;
+          color: white;
+          background-color: #ea4d84;
+          padding: .3rem;
+          font-size: .6rem;
+          border-radius: 50%;
+          text-align: start; }
 
 main .container-logo {
   text-align: center;
   position: relative;
   top: -3rem; }
+  main .container-logo > button {
+    display: none; }
   main .container-logo .image-logo-brand {
     width: 110px; }
   main .container-logo .container-list-nav {
@@ -605,6 +796,57 @@ main .container-logo {
       color: #ea4d84; }
     main .container-logo .container-list-nav a:focus {
       color: #ea4d84; }
+
+@media screen and (max-width: 568px) {
+  main .navbar-top .container-menu {
+    width: 100%; }
+    main .navbar-top .container-menu .container-list-menu {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      text-align: center;
+      margin-top: 0; }
+      main .navbar-top .container-menu .container-list-menu .link-menu {
+        height: auto;
+        display: flex;
+        align-items: flex-start; }
+        main .navbar-top .container-menu .container-list-menu .link-menu .sup {
+          position: relative;
+          left: -6px;
+          color: white;
+          background-color: #ea4d84;
+          padding: .3rem;
+          font-size: .6rem;
+          border-radius: 50%;
+          text-align: start; }
+      main .navbar-top .container-menu .container-list-menu .menu-profile {
+        width: 140px;
+        background-color: #ea4d84;
+        border-radius: 20px; }
+        main .navbar-top .container-menu .container-list-menu .menu-profile > a {
+          position: relative;
+          top: 2px;
+          left: 2px;
+          display: flex;
+          align-items: center; }
+          main .navbar-top .container-menu .container-list-menu .menu-profile > a .icon-gray {
+            display: none; }
+          main .navbar-top .container-menu .container-list-menu .menu-profile > a .icon-white {
+            display: block; }
+          main .navbar-top .container-menu .container-list-menu .menu-profile > a .name {
+            display: block;
+            color: white;
+            margin-left: 1rem; }
+  main .container-logo {
+    position: static;
+    margin-top: 1.5rem; }
+    main .container-logo > button {
+      display: inline-flex;
+      position: absolute;
+      top: 135px;
+      left: 14px; }
+    main .container-logo .container-list-nav {
+      display: none; } }
 
 .left-container-pay .wrapper-header {
   display: flex;
@@ -1067,11 +1309,35 @@ main .navbar-top {
   display: flex;
   justify-content: space-between;
   margin-top: 2rem; }
+  main .navbar-top .container-menu {
+    z-index: 2; }
+    main .navbar-top .container-menu .container-list-menu {
+      display: flex;
+      gap: 1.2em; }
+      main .navbar-top .container-menu .container-list-menu .icon-white {
+        display: none; }
+      main .navbar-top .container-menu .container-list-menu .name {
+        display: none; }
+      main .navbar-top .container-menu .container-list-menu .link-menu {
+        height: auto;
+        display: flex;
+        align-items: flex-start; }
+        main .navbar-top .container-menu .container-list-menu .link-menu .sup {
+          position: relative;
+          left: -6px;
+          color: white;
+          background-color: #ea4d84;
+          padding: .3rem;
+          font-size: .6rem;
+          border-radius: 50%;
+          text-align: start; }
 
 main .container-logo {
   text-align: center;
   position: relative;
   top: -3rem; }
+  main .container-logo > button {
+    display: none; }
   main .container-logo .image-logo-brand {
     width: 110px; }
   main .container-logo .container-list-nav {
@@ -1084,6 +1350,57 @@ main .container-logo {
       color: #ea4d84; }
     main .container-logo .container-list-nav a:focus {
       color: #ea4d84; }
+
+@media screen and (max-width: 568px) {
+  main .navbar-top .container-menu {
+    width: 100%; }
+    main .navbar-top .container-menu .container-list-menu {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      text-align: center;
+      margin-top: 0; }
+      main .navbar-top .container-menu .container-list-menu .link-menu {
+        height: auto;
+        display: flex;
+        align-items: flex-start; }
+        main .navbar-top .container-menu .container-list-menu .link-menu .sup {
+          position: relative;
+          left: -6px;
+          color: white;
+          background-color: #ea4d84;
+          padding: .3rem;
+          font-size: .6rem;
+          border-radius: 50%;
+          text-align: start; }
+      main .navbar-top .container-menu .container-list-menu .menu-profile {
+        width: 140px;
+        background-color: #ea4d84;
+        border-radius: 20px; }
+        main .navbar-top .container-menu .container-list-menu .menu-profile > a {
+          position: relative;
+          top: 2px;
+          left: 2px;
+          display: flex;
+          align-items: center; }
+          main .navbar-top .container-menu .container-list-menu .menu-profile > a .icon-gray {
+            display: none; }
+          main .navbar-top .container-menu .container-list-menu .menu-profile > a .icon-white {
+            display: block; }
+          main .navbar-top .container-menu .container-list-menu .menu-profile > a .name {
+            display: block;
+            color: white;
+            margin-left: 1rem; }
+  main .container-logo {
+    position: static;
+    margin-top: 1.5rem; }
+    main .container-logo > button {
+      display: inline-flex;
+      position: absolute;
+      top: 135px;
+      left: 14px; }
+    main .container-logo .container-list-nav {
+      display: none; } }
 
 .breadcrumb-api {
   width: 100%;
