@@ -151,7 +151,8 @@ textarea {
             border-radius: 50%;
             text-align: start; }
         #header .navbar-top .container-menu .container-list-menu .menu-profile {
-          width: 140px;
+          min-width: 140px;
+          width: 160px;
           background-color: #ea4d84;
           border-radius: 20px; }
           #header .navbar-top .container-menu .container-list-menu .menu-profile > a {
@@ -560,7 +561,8 @@ textarea {
           border-radius: 50%;
           text-align: start; }
       .navbar .navbar-top .container-menu .container-list-menu .menu-profile {
-        width: 140px;
+        min-width: 140px;
+        width: 160px;
         background-color: #ea4d84;
         border-radius: 20px; }
         .navbar .navbar-top .container-menu .container-list-menu .menu-profile > a {
@@ -846,7 +848,8 @@ main .container-logo {
           border-radius: 50%;
           text-align: start; }
       main .navbar-top .container-menu .container-list-menu .menu-profile {
-        width: 140px;
+        min-width: 140px;
+        width: 160px;
         background-color: #ea4d84;
         border-radius: 20px; }
         main .navbar-top .container-menu .container-list-menu .menu-profile > a {
@@ -1419,7 +1422,8 @@ main .container-logo {
           border-radius: 50%;
           text-align: start; }
       main .navbar-top .container-menu .container-list-menu .menu-profile {
-        width: 140px;
+        min-width: 140px;
+        width: 160px;
         background-color: #ea4d84;
         border-radius: 20px; }
         main .navbar-top .container-menu .container-list-menu .menu-profile > a {

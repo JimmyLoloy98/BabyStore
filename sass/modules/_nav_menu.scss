@@ -99,7 +99,8 @@
           }
 
           .menu-profile{
-            width: 140px;
+            min-width: 140px;
+            width: 160px;
             background-color: $pink-100;
             border-radius: 20px;
 
