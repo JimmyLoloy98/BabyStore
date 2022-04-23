@@ -3,13 +3,11 @@
     background-color: $white;
     box-shadow: .1rem .1rem .6rem rgba(0,0,0,0.1), -.1rem -.1rem .6rem rgba(0,0,0,0.1);
     padding: .5rem;
-    min-height: 350px;
 
     .card-header{
       position: relative;
       display: block;
       width: 100%;  
-      border-radius: calc(var(--curve) * 1px);
       overflow: hidden;
       text-decoration: none;
       
@@ -31,32 +29,6 @@
         svg:hover{
           fill: $pink-100;
           transition: 250ms;
-        }
-      }
-    
-      .card-button{
-        display: flex;
-        align-items: center;
-        justify-content: end;
-        cursor: pointer;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        z-index: 1;      
-        border-radius: 20px 0 0 0;    
-        background-color: $pink-25;
-        border: none;
-        padding: 0.6rem;
-        width: 100%;
-        /* Animation with hover */
-        transform: translateY(100%);
-        transition: .2s ease-in-out;
-      
-        p{
-          font-size: 1.25rem;
-          color: $gray-100;
-          margin-left: .8rem;
         }
       }
     }

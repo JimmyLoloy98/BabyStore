@@ -10,14 +10,14 @@
 
 #featured-products{
   margin-top: 3rem;
-
+  
   .products-title{
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 3rem;
     
-    .text-featured{
+    > h2{
       margin-left: .6rem;
     }
   }
@@ -26,5 +26,27 @@
     @include grid();
 
     @include card1;
+  }
+}
+
+@include mobile{
+  #featured-products{
+    .products-title{
+      margin-bottom: 1.6rem;
+    }
+
+    .container-product-cards{
+      display: flex;
+      width: 100vw;
+      overflow-x: auto;
+      .card-item{
+        .card-description{
+          margin-top: 1rem;
+          .product-name{
+            font-size: 1rem;
+          }
+        }
+      }
+    }
   }
 }
