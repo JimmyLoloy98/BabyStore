@@ -642,32 +642,33 @@ textarea {
   margin-top: 2rem;
   width: 100%; }
   .wrapper-product .wrapper-images-product {
+    width: 50%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    width: 50%; }
+    justify-content: space-between; }
     .wrapper-product .wrapper-images-product .wrapper-left {
-      width: 20%;
+      max-width: 20%;
+      max-height: 550px;
+      min-height: 550px;
+      overflow-y: auto;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       gap: .5rem; }
+      .wrapper-product .wrapper-images-product .wrapper-left::-webkit-scrollbar {
+        display: none; }
       .wrapper-product .wrapper-images-product .wrapper-left .background-image {
-        background-color: #e6e6e6;
+        box-shadow: 0.1rem 0.1rem 0.6rem rgba(0, 0, 0, 0.2), -0.1rem -0.1rem 0.6rem rgba(0, 0, 0, 0.2);
         padding: .3rem;
         width: 100%; }
         .wrapper-product .wrapper-images-product .wrapper-left .background-image .image-product {
           width: 100%;
           height: 100%;
           object-fit: cover; }
-      .wrapper-product .wrapper-images-product .wrapper-left .button-down-icon {
-        border: none;
-        background-color: transparent;
-        cursor: pointer; }
     .wrapper-product .wrapper-images-product .wrapper-right {
       width: 80%; }
       .wrapper-product .wrapper-images-product .wrapper-right .background-image {
-        background-color: #e6e6e6;
+        box-shadow: 0.1rem 0.1rem 0.6rem rgba(0, 0, 0, 0.2), -0.1rem -0.1rem 0.6rem rgba(0, 0, 0, 0.2);
         padding: .3rem;
         margin-left: .5rem; }
         .wrapper-product .wrapper-images-product .wrapper-right .background-image .image-product {
@@ -686,23 +687,33 @@ textarea {
         display: flex;
         flex-direction: column;
         gap: 1rem; }
-        .wrapper-product .wrapper-details-product .container-details .details-top div h3 {
+        .wrapper-product .wrapper-details-product .container-details .details-top span h3 {
           margin-bottom: .6rem; }
       .wrapper-product .wrapper-details-product .container-details .details-bottom {
         display: flex;
-        align-items: flex-end;
         align-items: center;
-        gap: 2.5rem;
+        justify-content: space-between;
         padding-top: 1rem;
         border-top: 2px solid #4a4a4a; }
-        .wrapper-product .wrapper-details-product .container-details .details-bottom .quantity .counter {
+        .wrapper-product .wrapper-details-product .container-details .details-bottom .description-details {
           display: flex;
-          justify-content: space-evenly;
+          justify-content: space-between;
           align-items: center;
-          padding: .3rem 0;
-          margin-top: .3rem;
-          border: 1px solid #4a4a4a;
-          border-radius: 20px; }
+          width: 50%; }
+          .wrapper-product .wrapper-details-product .container-details .details-bottom .description-details .price > h2 {
+            font-size: 1.45rem; }
+          .wrapper-product .wrapper-details-product .container-details .details-bottom .description-details .price > p {
+            margin-top: .5rem;
+            font-size: .9rem;
+            color: #4a4a4a; }
+          .wrapper-product .wrapper-details-product .container-details .details-bottom .description-details .quantity .counter {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: .3rem 0;
+            margin-top: .3rem;
+            border: 1px solid #4a4a4a;
+            border-radius: 20px; }
         .wrapper-product .wrapper-details-product .container-details .details-bottom .add-cart {
           display: flex;
           justify-content: space-between;
@@ -716,12 +727,10 @@ textarea {
           font-weight: 600; }
 
 .container-accesories-cards {
-  margin-top: 2rem;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   column-gap: 16px;
-  row-gap: 32px;
-  max-width: 100%; }
+  row-gap: 32px; }
   .container-accesories-cards .card-item-accesories {
     background-color: white;
     box-shadow: 0.1rem 0.1rem 0.6rem rgba(0, 0, 0, 0.1), -0.1rem -0.1rem 0.6rem rgba(0, 0, 0, 0.1);
@@ -774,6 +783,55 @@ textarea {
           color: white;
           font-size: .875rem;
           font-weight: 600; }
+
+@media screen and (max-width: 568px) {
+  .breadcrumb {
+    margin-top: 1.5rem; }
+  .product-intern-title {
+    font-size: larger; }
+  .wrapper-product {
+    /* .wrapper-images-product{
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      overflow-x: auto;
+      .wrapper-left{
+        width: 100%;
+        width: auto;
+        flex-direction: row;
+
+        .button-down-icon{ display: none; }
+      }
+
+      .wrapper-right{
+        width: 100%;
+        .background-image{
+          width: 100%;
+          margin: 0;
+        }
+      }
+    } */ }
+    .wrapper-product .wrapper-details-product {
+      width: 100%;
+      padding-bottom: 1rem; }
+      .wrapper-product .wrapper-details-product .container-details .details-top {
+        padding-bottom: .6rem; }
+        .wrapper-product .wrapper-details-product .container-details .details-top h3 {
+          font-size: medium; }
+        .wrapper-product .wrapper-details-product .container-details .details-top p {
+          font-size: small; }
+      .wrapper-product .wrapper-details-product .container-details .details-bottom {
+        flex-direction: column; }
+        .wrapper-product .wrapper-details-product .container-details .details-bottom .description-details .price > h2 {
+          font-size: 1.25rem; }
+        .wrapper-product .wrapper-details-product .container-details .details-bottom .description-details .price > p {
+          font-size: .8rem; }
+        .wrapper-product .wrapper-details-product .container-details .details-bottom > .add-cart {
+          display: block;
+          width: 50%;
+          margin-top: 1.2rem;
+          text-align: center;
+          padding: 1rem 0; } }
 
 @use '../modules/nav_menu';
 @use '../modules/input_form';
