@@ -336,7 +336,6 @@ textarea {
     left: 8%;
     width: 13rem; }
   #categories-products .container-aside-left {
-    height: 100vh;
     width: 30%; }
     #categories-products .container-aside-left details {
       display: block; }
@@ -973,11 +972,9 @@ main .container-logo {
   position: relative;
   bottom: 0;
   width: 100%;
-  height: 20%;
   background-color: #ea4d84; }
   .bg-footer footer {
-    margin: 10rem 3rem 0 3rem;
-    margin-top: 11rem;
+    margin: 11rem 3rem 0 3rem;
     padding: 3rem 5rem 1rem 5rem;
     background-color: #fde8ee;
     position: relative;
@@ -1040,8 +1037,17 @@ main .container-logo {
       justify-content: space-between;
       align-items: center;
       padding-top: 2rem; }
-    @media screen and (max-width: 568px) {
+  .bg-footer .whatsapp-chat {
+    z-index: 999;
+    position: absolute;
+    bottom: 320px;
+    right: 3rem; }
+  @media screen and (max-width: 568px) {
+    .bg-footer {
+      margin-top: 11rem;
+      height: 0%; }
       .bg-footer footer {
+        margin: 2rem 1rem 0 1rem;
         padding: 3rem 1.5rem 1rem 1.5rem; }
         .bg-footer footer .wrapper-content-footer {
           flex-direction: column;
@@ -1056,12 +1062,10 @@ main .container-logo {
         .bg-footer footer .legal > span {
           display: none; }
         .bg-footer footer .legal > p {
-          text-align: center; } }
-  .bg-footer .whatsapp-chat {
-    z-index: 999;
-    position: absolute;
-    bottom: 320px;
-    right: 3rem; }
+          text-align: center; }
+      .bg-footer .whatsapp-chat {
+        top: -8.5rem;
+        right: 1.5rem; } }
 
 @use './modules/cta_whatsapp';
 .hero-about {
