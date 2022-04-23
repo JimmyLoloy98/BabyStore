@@ -17,4 +17,17 @@
     background-color: $pink-50;
     box-shadow: .1rem .1rem .6rem rgba(0,0,0,0.1), -.1rem -.1rem .6rem rgba(0,0,0,0.1);
   }
+
+  @include mobile {
+    flex-direction: column;
+    margin-top: 2rem;
+    .left-container-pay{
+      width: 100%;
+      padding: 1rem .6rem;
+    }
+    .right-container-pay{
+      width: 100%;
+      padding: 1rem .6rem;
+    }
+  }
 }
