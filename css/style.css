@@ -666,7 +666,7 @@ textarea {
           height: 100%;
           object-fit: cover; }
     .wrapper-product .wrapper-images-product .wrapper-right {
-      width: 80%; }
+      min-width: 80%; }
       .wrapper-product .wrapper-images-product .wrapper-right .background-image {
         box-shadow: 0.1rem 0.1rem 0.6rem rgba(0, 0, 0, 0.2), -0.1rem -0.1rem 0.6rem rgba(0, 0, 0, 0.2);
         padding: .3rem;

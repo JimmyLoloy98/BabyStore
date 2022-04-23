@@ -50,7 +50,8 @@
     }
 
     .wrapper-right{
-      width: 80%;
+      min-width: 80%;
+      // max-height: 550px;
 
       .background-image{
         box-shadow: .1rem .1rem .6rem rgba(0,0,0,0.2), -.1rem -.1rem .6rem rgba(0,0,0,0.2);
