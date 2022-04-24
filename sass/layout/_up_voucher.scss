@@ -1,154 +1,108 @@
-section {
-	width: 56rem;
-	height: auto;
-	background: $pink-50;
-	float: left;
-	box-shadow: 0.1rem 0.01rem 0.01rem 0.3rem rgba(1, 1, 1, 0.1);
+@use '../modules/input_form';
 
-	.container {
-		width: 61%;
-		background: $pink-50;
-		display: flex;
-		margin-right: 4rem;
-		margin-left: 4rem;
-
-		.container-sub {
-			font-size: 1.2rem;
-			margin-left: 3rem;
-
-			.container-text {
-				font-size: 0.9rem;
-				margin-left: 3rem;
-				margin-right: 2rem;
-			}
+@mixin input-file {
+	.inputfile {
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+		
+		& + label {
+			border-radius: 20px;
+			cursor: pointer;
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			gap: .5rem;
+			overflow: hidden;
+			padding: 0.5rem 1rem;
 		}
+	}
+	.inputfile-2 + label {
+		color: $gray-100;
+		border: 1px solid currentColor;
+	}
+
+	.iborrainputfile{ 
+		font-size: .9rem; 
+		color: $gray-75;
 	}
 }
 
-.form {
-	margin-left: 3rem;
-	float: left;
-	width: 50%;
+.wrapper-send-voucher{
+	display: flex;
+	justify-content: center;
+	gap: 3rem;
 
-	.contein {
-		background: $white;
-		border-radius: 0.9rem;
-		height: 12rem;
-		box-shadow: 0.1rem 0.01rem 0.01rem 0.3rem rgba(1, 1, 1, 0.1);
-
-		.tex {
+	.container-left-up{
+		padding: 1rem;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		
+		.container-form-upload{
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			border-radius: 20px;
+			gap: 1rem;
+			padding: 1.5rem 1rem;
+			background-color: $white;
+			box-shadow: .1rem .1rem .6rem rgba(0,0,0,0.1), -.1rem -.1rem .6rem rgba(0,0,0,0.1);
 			text-align: center;
-			margin-top: 1rem;
-			font-size: 1.2rem;
-		}
-	}
-}
 
-.contenedor-1 {
-	display: flex;
-	padding: 0.38rem 0.5rem;
-	align-items: center;
-	border-radius: 2rem;
-	border: 1px solid $gray-50;
-	margin-bottom: 1rem;
-	margin-left: 2rem;
-	width: 90%;
+			.file-upload{
+				@include input-file;
+				max-width: 300px;
+				background-color: $gray-25;
+				border-radius: 20px;
 
-	.controls {
-		background: $white;
-		font-size: 1.1rem;
-		margin-left: 0.3rem;
-		border: none;
-		width: 98%;
+				&:hover{
+					border-radius: 20px;
+					background-color: $gray-50;
+				}
+			}
 
-		.contenedor-1 img {
-			margin-left: 1rem;
-		}
-	}
-}
-
-.contenedor-one {
-	background: $gray-50;
-	display: flex;
-	padding: 0.38rem 0.5rem;
-	align-items: center;
-	border-radius: 2rem;
-	border: 1px solid $gray-75;
-	margin-bottom: 1rem;
-	margin-left: 2rem;
-	width: 90%;
-
-	.contenedor-one img {
-		margin-left: 1rem;
-
-		.controls-one {
-			background: $gray-75;
-			padding: 0.rem;
-			font-size: 1.1rem;
-			width: 98%;
-			margin-left: 0.6em;
-			border: none;
-		}
-	}
-}
-
-.text-1 {
-	font-size: 0.75rem;
-	margin-left: 1.3rem;
-	margin-bottom: 1rem;
-	margin-top: 0rem;
-}
-
-.button-up {
-	border-radius: 0 0 1.3rem 0;
-	border: none;
-	margin-top: 1rem;
-
-	.datos {
-		background: $pink-100;
-		border-radius: 0 0 1.3rem 0;
-		color: $white;
-		font-size: 0.9rem;
-		width: 40%;
-		height: 2rem;
-		display: flex;
-		align-items: left;
-		margin-bottom: 1.7rem;
-		border: none;
-		padding-left: 1.2rem;
-		padding-top: 0.3rem;
-	}
-}
-
-
-.YP {
-	float: left;
-	margin-left: 12rem;
-
-	.contenedor-2 {
-		text-align: center;
-		font-size: 1.4rem;
-
-		.button-sub {
-			border-radius: 0 0 1.3rem 0;
-			border: none;
-			margin-top: 1rem;
-
-			.mensaje {
-				background: $pink-100;
-				border-radius: 0 0 1.3rem 0;
-				color: $white;
-				margin-left: 20%;
-				font-size: 0.9rem;
-				width: 60%;
-				height: 2rem;
-				display: flex;
-				margin-bottom: 1.rem;
-				border: none;
-				text-align: center;
-				padding-left: 2rem;
-				padding-top: 0.3rem;
+			> sub{
+				font-size: .8rem;
+				color: $gray-100;
 			}
 		}
+
+		> button{
+			margin-top: 1.2rem;
+			background-color: $pink-100;
+			border-radius: 0 0 20px 0;
+			padding: .8rem 1.5rem;
+			color: $white;
+		}
+	}
+
+	.container-right-up{
+		padding: 1rem;
+		display: flex;
+		flex-direction: column;
+		// justify-content: space-between;
+		align-items: center;
+		gap: 1.2rem;
+
+		> img{
+			width: 100px;
+		}
+
+		> button{
+			background-color: $pink-100;
+			border-radius: 0 0 20px 0;
+			padding: .8rem 1.5rem;
+			color: $white;
+		}
+	}
+}
+
+.container-input{
+	@include input_form;
+
+	> input{
+		margin-left: .4rem;
 	}
 }

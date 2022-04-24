@@ -1722,3 +1722,90 @@ main .container-logo {
       font-size: .8rem; }
       .details .pay-method .images-method > figure > figcaption p > span {
         font-size: .9rem; } }
+
+@use '../modules/input_form';
+.wrapper-send-voucher {
+  display: flex;
+  justify-content: center;
+  gap: 3rem; }
+  .wrapper-send-voucher .container-left-up {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; }
+    .wrapper-send-voucher .container-left-up .container-form-upload {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-radius: 20px;
+      gap: 1rem;
+      padding: 1.5rem 1rem;
+      background-color: white;
+      box-shadow: 0.1rem 0.1rem 0.6rem rgba(0, 0, 0, 0.1), -0.1rem -0.1rem 0.6rem rgba(0, 0, 0, 0.1);
+      text-align: center; }
+      .wrapper-send-voucher .container-left-up .container-form-upload .file-upload {
+        max-width: 300px;
+        background-color: #e6e6e6;
+        border-radius: 20px; }
+        .wrapper-send-voucher .container-left-up .container-form-upload .file-upload .inputfile {
+          opacity: 0;
+          overflow: hidden;
+          position: absolute;
+          z-index: -1; }
+          .wrapper-send-voucher .container-left-up .container-form-upload .file-upload .inputfile + label {
+            border-radius: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: .5rem;
+            overflow: hidden;
+            padding: 0.5rem 1rem; }
+        .wrapper-send-voucher .container-left-up .container-form-upload .file-upload .inputfile-2 + label {
+          color: #4a4a4a;
+          border: 1px solid currentColor; }
+        .wrapper-send-voucher .container-left-up .container-form-upload .file-upload .iborrainputfile {
+          font-size: .9rem;
+          color: #8f8f8f; }
+        .wrapper-send-voucher .container-left-up .container-form-upload .file-upload:hover {
+          border-radius: 20px;
+          background-color: #c9c9c9; }
+      .wrapper-send-voucher .container-left-up .container-form-upload > sub {
+        font-size: .8rem;
+        color: #4a4a4a; }
+    .wrapper-send-voucher .container-left-up > button {
+      margin-top: 1.2rem;
+      background-color: #ea4d84;
+      border-radius: 0 0 20px 0;
+      padding: .8rem 1.5rem;
+      color: white; }
+  .wrapper-send-voucher .container-right-up {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem; }
+    .wrapper-send-voucher .container-right-up > img {
+      width: 100px; }
+    .wrapper-send-voucher .container-right-up > button {
+      background-color: #ea4d84;
+      border-radius: 0 0 20px 0;
+      padding: .8rem 1.5rem;
+      color: white; }
+
+.container-input {
+  z-index: 2;
+  width: 100%;
+  min-width: 255px;
+  display: flex;
+  padding: .6em 1em;
+  align-items: center;
+  border-radius: 20px;
+  border: 1px solid #4a4a4a; }
+  .container-input > img {
+    width: 22px; }
+  .container-input .input {
+    width: 98%;
+    margin-left: .5em; }
+  .container-input > input {
+    margin-left: .4rem; }

@@ -1,85 +1,274 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="up-voucher.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Sube tu voucher | Baby's Store Yalet</title>
 </head>
-
 <body>
-  <section class="container">
-    <div class="container-general">
-      <div class="container-sub">
-        <p>Suba su compronbate de pago.</p>
+<div class='body'>
+  <div class='navbar'>
+    <nav class='navbar-top'>
+      <div class='container-search'>
+        <img class='icon-search' src="./images/search-icon.svg" alt="Icono de busqueda">
+        <input class='input-search' type="text" placeholder="Buscar">
       </div>
-      <div class="container-text">
-        <p>Puede subir su pantallaso, o foto de su comprobante de pago por este medio, o mandarnos directamente a
-          nuestro whattsap con el detalle de cuales es su pedido o el número de pedido que le llegó al correo registrado
-          al momento de comprar.</p>
-      </div>
-      <div class="form">
-        <div class="contein">
-          <div class="tex">
-            <p>Suba su foto o pantallaso</p>
-          </div>
-          <div class="contenedor-1">
-            <img class="two" src="img/credi.svg">
-            <input class="controls" type="text" name="NTarjeta" id="NTarjeta" placeholder="Número de pedido">
-          </div>
-          <div class="contenedor-one">
-            <img class="two" src="img/up.svg">
-            <input class="controls-one" type="text" name="CVV" id="CVV" placeholder=" Suba aquí su imagen">
-          </div>
-          <div class="text-1">
-            <p>Tipos permitidos: jpg, jpeg, png, pdf</p>
+
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class='header-product-items'>
+          <span>
+            <svg width="28" height="32" viewBox="0 0 28 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M19 7C19 5.67392 18.4732 4.40215 17.5355 3.46447C16.5979 2.52678 15.3261 2 14 2C12.6739 2 11.4021 2.52678 10.4645 3.46447C9.52678 4.40215 9 5.67392 9 7V8H19V7ZM21 7V8H28V28C28 29.0609 27.5786 30.0783 26.8284 30.8284C26.0783 31.5786 25.0609 32 24 32H4C2.93913 32 1.92172 31.5786 1.17157 30.8284C0.421427 30.0783 0 29.0609 0 28V8H7V7C7 5.14348 7.7375 3.36301 9.05025 2.05025C10.363 0.737498 12.1435 0 14 0C15.8565 0 17.637 0.737498 18.9497 2.05025C20.2625 3.36301 21 5.14348 21 7ZM26 28V10H2V28C2 28.5304 2.21071 29.0391 2.58579 29.4142C2.96086 29.7893 3.46957 30 4 30H24C24.5304 30 25.0391 29.7893 25.4142 29.4142C25.7893 29.0391 26 28.5304 26 28ZM14 15.986C17.328 12.564 25.65 18.552 14 26.25C2.35 18.55 10.672 12.564 14 15.986Z" fill="#4B4B4B"/>
+            </svg>
+            01 productos en el carrito
+          </span>
+        </div>
+
+        <div class='item_product'>
+          <img src="./images/logo-wo-border-image.png" alt="Imagen del producto">
+          <div class='right-description'>
+            <p class='title-product-item'>CHUPON DE FRUTAS DE OSITO PELUCHE</p>
+            <div class='footer-description'>
+              <p>Cant. 01</p>
+              <p>Total: S/. 18.00</p>
+            </div>
           </div>
         </div>
-        <div class="button-up">
-          <button class="datos">Enviar datos</button>
+
+        <div class='container-cart-button'>
+          <button class='cart_button' type='button'>
+            <span>
+              <svg width="28" height="32" viewBox="0 0 28 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M19 7C19 5.67392 18.4732 4.40215 17.5355 3.46447C16.5979 2.52678 15.3261 2 14 2C12.6739 2 11.4021 2.52678 10.4645 3.46447C9.52678 4.40215 9 5.67392 9 7V8H19V7ZM21 7V8H28V28C28 29.0609 27.5786 30.0783 26.8284 30.8284C26.0783 31.5786 25.0609 32 24 32H4C2.93913 32 1.92172 31.5786 1.17157 30.8284C0.421427 30.0783 0 29.0609 0 28V8H7V7C7 5.14348 7.7375 3.36301 9.05025 2.05025C10.363 0.737498 12.1435 0 14 0C15.8565 0 17.637 0.737498 18.9497 2.05025C20.2625 3.36301 21 5.14348 21 7ZM26 28V10H2V28C2 28.5304 2.21071 29.0391 2.58579 29.4142C2.96086 29.7893 3.46957 30 4 30H24C24.5304 30 25.0391 29.7893 25.4142 29.4142C25.7893 29.0391 26 28.5304 26 28ZM14 15.986C17.328 12.564 25.65 18.552 14 26.25C2.35 18.55 10.672 12.564 14 15.986Z" fill="#fff"/>
+              </svg>
+              Comprar
+            </span>
+
+            <p>S/. 52.00</p>
+          </button>
+
         </div>
       </div>
-      <div class="YP">
-        <div class="contenedor-2">
-          <p>Envíanos por Whattsap</p>
-          <div class="whats">
-            <img src="img/what.svg">
-          </div>
-          <div class="button-sub">
-            <button class="mensaje">Enviar mensaje</button>
-          </div>
-        </div>
+
+      <div class='container-menu'>
+        <ul class='container-list-menu'>
+          <li class='link-menu'>
+            <a href="google.com">
+              <img src="./images/heart-borders-icon.svg" alt="Corazón">
+            </a>
+          </li>
+          <li class='link-menu menu-profile'>
+            <a href="google.com">
+              <img class='icon-gray' src="./images/user-icon.svg" alt="">
+              <img class='icon-white' src="./images/user-icon-white.svg" alt="">
+              <p class='name'>Jennifer</p>
+            </a>
+          </li>
+          <li>
+            <a class='link-menu' href="javascript:void(0);" onclick='openNav()'>
+              <img src="./images/cart-icon.svg" alt="">
+              <sup class='sup'>02</sup>
+            </a>
+          </li>
+        </ul>
       </div>
-    </div>
-  </section>
-  <aside>
-    <div class="conten">
-      <div class="text-2">
-        <p>Yape o Plin</p>
-      </div>
-      <div class="Yape">
-        <img src="img/yape.svg">
-      </div>
-      <div class="plin">
-        <img src="img/plin.svg">
-      </div>
-      <div class="text-3">
-        <p>Número de celular: 99856578</p>
-        <p>Lisseth Caballero </p>
-      </div>
-    </div>
-  </aside>
-  <div class="conten-1">
-    <div class="trans-banc">
-      <div class="text-4">
-        <p>Cuentas para transferencia bancaria.</p>
-      </div>
-      <div class="banc">
-        <img src="img/banco.svg">
-        <img src="img/banco.svg">
-        <img src="img/banco.svg">
-      </div>
+    </nav>
+
+    <div class='container-logo'>
+      <button type='button'>
+        <img class='menu-burger' src="./images/menu-burguer-icon.svg" alt="Menú">
+      </button>
+
+      <a href="/" style='display: inline-flex;'>
+        <img class='image-logo-brand' src="./images/logo-brand.png" alt="Baby Store Yaleth - Logo">
+      </a>
+
+      <ul class='container-list-nav'>
+        <li>
+          <a href="/">Inicio</a>
+        </li>
+        <li>
+          <a href="about.html">Nosotros</a>
+        </li>
+        <li>
+          <a href="products.html">Productos
+            <img src="./images/arrow-down-icon.svg" alt="icono de flecha abajo">
+          </a>
+        </li>
+        <li>
+          <a href="contact.html">Contacto</a>
+        </li>
+      </ul>
     </div>
   </div>
-</body>
 
+  <div class='breadcrumb-api'></div>
+
+  <section class='flex-container'>
+    <div class='left-container-pay'>
+      <form>
+        <div class='wrapper-header'>
+          <p>Suba su comprobante de pago</p>
+        </div>
+        
+        <p style='font-size: .85rem; margin-bottom: 1.2rem;'>Puede subir su pantallaso, o foto de su comprobante de pago por este medio, o mandarnos directamente a nuestro whatsapp con el detalle de su pedido o el número de pedido que le llegó al correo registrado al momento de comprar.</p>
+
+        <div class='wrapper-send-voucher'>
+          <div class='container-left-up'>
+            <div class='container-form-upload'>
+              <p>Suba su foto o pantallaso</p>
+              <span class='container-input'>
+                <img src="./icons/hash-icon.svg" alt="Número de pedido">
+                <input type="text" placeholder="Número de pedido">
+              </span>
+
+              <span class='file-upload'>
+                <input class="inputfile inputfile-2" id="file-2" type='file' placeholder='Suba su imagen aquí'>
+                <label for="file-2">
+                  <img src="./icons/upload-icon.svg" alt="Subir archivo">
+                  <span class="iborrainputfile">Seleccionar archivo</span>
+                </label>
+              </span>
+
+              <sub>Tipos permitidos: jpg, jpeg, png, pdf</sub>
+            </div>
+            
+            <button type='button'>Enviar datos</button>
+          </div>
+          
+          <div class='container-right-up'>
+            <p>Envíanos por Whatsapp</p>
+            <img src="./images/whatsapp-icon.svg" alt="">
+            <button type='button'>Enviar mensaje</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <aside class='right-container-pay'>
+      <p>Yape o Plin</p>
+
+      <figure style='text-align: center;'>
+        <img src="./images/yape.png" alt="imagen de Yape" style='margin-bottom: .6rem;'>
+        <img src="./images/plin.png" alt="imagen de Plin">
+
+        <figcaption style='margin-top: 1.5rem;'>
+          <p>Número de celular: <span>966123456</span></p>
+          <p style='margin-top: .4rem;'>Lisseth Caballero</p>
+        </figcaption>
+      </figure>
+    </aside>
+  </section>
+</div>
+<div class='bg-footer'>
+  <footer>
+    <div class='wrapper-content-footer'>
+      <div class='contact'>
+        <a href="">
+          <img src="./images/facebook-icon.svg" alt="">
+          <p>Facebook</p>
+        </a>
+        <a href="">
+          <img src="./images/instagram-icon.svg" alt="">
+          <p>Instagram</p>
+        </a>
+        <a href="">
+          <img src="./images/mail-icon.svg" alt="">
+          <p>info@yalethstore.com</p>
+        </a>
+        <a href="">
+          <img src="./images/location-icon.svg" alt="">
+          <p>Ubicanos</p>
+        </a>
+      </div>
+  
+      <div class='delivery'>
+        <div class='top'>
+          <img src="./images/truck-icon.svg" alt="">
+          <span>
+            <p>Envío DELIVERY</p>
+            <p class='cover'>Lima y Provincias</p>
+            <button type='button'>Costos</button>
+          </span>
+        </div>
+  
+        <ul class='bottom'>
+          <li><a href="#">Politicas de uso</a></li>
+          <li><a href="#">Devoluciones</a></li>
+        </ul>
+      </div>
+  
+      <div class='suscribe'>
+        <p>Suscríbete para novedades</p>
+        <input type="email" placeholder='Correo electrónico'>
+        <button type='button'>Enviar</button>
+      </div>
+    </div>
+  
+    <div class='legal'>
+      <span>
+        <img src="./images/mastercard_Logo-image.png" alt="">
+        <img src="./images/visa-icon.svg" alt="">
+      </span>
+      <p style='font-size: .7em;'>Desarrollado por Web-Out © 2022 YALETH. Todos los derechos reservados</p>
+    </div>
+  </footer>
+  <a class='whatsapp-chat' href="web.whatsapp.com">
+    <img src="./images/whatsapp-logo-image.png" alt="">
+  </a>
+</div>
+</body>
+<script>
+  var sidenav = window.matchMedia("(max-width: 568px)")
+  closeNav(sidenav)
+  sidenav.addListener(closeNav)
+
+  function openNav() {
+    if (sidenav.matches) {
+      document.getElementById("mySidenav").style.width = "100%";
+    } else{
+      document.getElementById("mySidenav").style.width = "550px";
+      document.body.style.backgroundColor = "rgba(0,0,0,0.6)";
+    }
+  }
+
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.body.style.backgroundColor = "white";
+  }
+</script>
+
+<script>
+  'use strict';
+
+;( function ( document, window, index )
+{
+	var inputs = document.querySelectorAll( '.inputfile' );
+	Array.prototype.forEach.call( inputs, function( input )
+	{
+		var label	 = input.nextElementSibling,
+			labelVal = label.innerHTML;
+
+		input.addEventListener( 'change', function( e )
+		{
+			var fileName = '';
+			if( this.files && this.files.length > 1 )
+				fileName = ( this.getAttribute( 'data-multiple-caption' ) || '' ).replace( '{count}', this.files.length );
+			else
+				fileName = e.target.value.split( '\\' ).pop();
+
+			if( fileName )
+				label.querySelector( 'span' ).innerHTML = fileName;
+			else
+				label.innerHTML = labelVal;
+		});
+	});
+}( document, window, 0 ));
+</script>
 </html>
