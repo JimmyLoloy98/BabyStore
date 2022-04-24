@@ -1125,14 +1125,15 @@ textarea {
         color: white;
         font-size: .875rem;
         font-weight: 600;
-        width: 10rem; }
+        width: 10rem;
+        margin-top: .5rem; }
 
 @use './modules/cta_whatsapp';
 #hero-contact {
   margin-top: 1rem;
   display: flex;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 1em;
   width: 100%; }
   #hero-contact .contact-form {
     padding: 1.6rem 1rem;
@@ -1144,23 +1145,26 @@ textarea {
       border-bottom: 1px solid #4a4a4a; }
     #hero-contact .contact-form .container-form {
       display: flex;
-      gap: 1rem;
+      gap: .3em;
       width: 100%; }
       #hero-contact .contact-form .container-form form {
         width: 70%;
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly; }
+        justify-content: space-evenly;
+        gap: .6rem;
+        margin-top: .5rem; }
         #hero-contact .contact-form .container-form form div {
           display: flex;
           align-items: center;
           gap: 1rem;
-          padding: .7rem;
+          padding: .6rem;
           border: 1px solid #4a4a4a;
           border-radius: 20px; }
           #hero-contact .contact-form .container-form form div input {
             font-size: .875rem;
-            width: 86%; }
+            width: 86%;
+            margin-left: -.6rem; }
       #hero-contact .contact-form .container-form .container-image {
         width: 30%;
         display: flex; }
@@ -1171,7 +1175,8 @@ textarea {
       padding: .8rem;
       border: 1px solid #4a4a4a;
       border-radius: 20px;
-      font-size: .875rem; }
+      font-size: .875rem;
+      margin-top: .6rem; }
     #hero-contact .contact-form .container-form-button {
       width: 100%;
       margin-top: .8rem;
@@ -1224,7 +1229,8 @@ textarea {
           color: white;
           font-size: .875rem;
           font-weight: 600;
-          width: 10rem; }
+          width: 10rem;
+          margin-top: .5rem; }
     #hero-contact .contact-details .divider {
       margin-top: 1.8rem;
       border-top: 1px solid #4a4a4a;
@@ -1248,7 +1254,8 @@ textarea {
           color: white;
           font-size: .875rem;
           font-weight: 600;
-          width: 10rem; }
+          width: 10rem;
+          margin-top: .5rem; }
 
 #maps-api {
   width: 100%;
@@ -1256,6 +1263,18 @@ textarea {
   margin-top: 3rem;
   background-color: #e6e6e6;
   box-shadow: 0.1rem 0.1rem 0.6rem rgba(0, 0, 0, 0.1), -0.1rem -0.1rem 0.6rem rgba(0, 0, 0, 0.1); }
+
+@media screen and (max-width: 568px) {
+  #hero-contact {
+    display: block; }
+    #hero-contact .contact-form {
+      width: 100%;
+      margin-bottom: 1.5rem; }
+      #hero-contact .contact-form .container-form .container-image {
+        display: block;
+        margin: auto 0; }
+    #hero-contact .contact-details {
+      width: 100%; } }
 
 .sidenav {
   height: 100%;
