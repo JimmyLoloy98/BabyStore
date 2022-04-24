@@ -40,12 +40,16 @@ button {
   outline: none; }
 
 input {
+  font-size: .9rem;
   outline: none;
   border: none;
   background-color: transparent; }
 
 textarea {
-  outline: none; }
+  font-size: .9rem;
+  outline: none;
+  border: none;
+  background-color: transparent; }
 
 ::placeholder {
   font-family: 'Comfortaa', cursive; }
@@ -833,108 +837,9 @@ textarea {
           text-align: center;
           padding: 1rem 0; } }
 
-@use '../modules/nav_menu';
 @use '../modules/input_form';
 @use '../modules/flex_container';
 @use '../modules/footer';
-main .navbar-top {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 2rem; }
-  main .navbar-top .container-menu {
-    z-index: 2; }
-    main .navbar-top .container-menu .container-list-menu {
-      display: flex;
-      gap: 1.2em; }
-      main .navbar-top .container-menu .container-list-menu .icon-white {
-        display: none; }
-      main .navbar-top .container-menu .container-list-menu .name {
-        display: none; }
-      main .navbar-top .container-menu .container-list-menu .link-menu {
-        height: auto;
-        display: flex;
-        align-items: flex-start; }
-        main .navbar-top .container-menu .container-list-menu .link-menu .sup {
-          position: relative;
-          left: -6px;
-          color: white;
-          background-color: #ea4d84;
-          padding: .3rem;
-          font-size: .6rem;
-          border-radius: 50%;
-          text-align: start; }
-
-main .container-logo {
-  text-align: center;
-  position: relative;
-  top: -3rem; }
-  main .container-logo > button {
-    display: none; }
-  main .container-logo .image-logo-brand {
-    width: 110px; }
-  main .container-logo .container-list-nav {
-    display: flex;
-    justify-content: center;
-    gap: 1.4em;
-    align-items: center;
-    margin-top: 1rem; }
-    main .container-logo .container-list-nav a:hover {
-      color: #ea4d84; }
-    main .container-logo .container-list-nav a:focus {
-      color: #ea4d84; }
-
-@media screen and (max-width: 568px) {
-  main .navbar-top .container-menu {
-    width: 100%; }
-    main .navbar-top .container-menu .container-list-menu {
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
-      text-align: center;
-      margin-top: 0; }
-      main .navbar-top .container-menu .container-list-menu .link-menu {
-        height: auto;
-        display: flex;
-        align-items: flex-start; }
-        main .navbar-top .container-menu .container-list-menu .link-menu .sup {
-          position: relative;
-          left: -6px;
-          color: white;
-          background-color: #ea4d84;
-          padding: .3rem;
-          font-size: .6rem;
-          border-radius: 50%;
-          text-align: start; }
-      main .navbar-top .container-menu .container-list-menu .menu-profile {
-        min-width: 140px;
-        width: 160px;
-        background-color: #ea4d84;
-        border-radius: 20px; }
-        main .navbar-top .container-menu .container-list-menu .menu-profile > a {
-          position: relative;
-          top: 2px;
-          left: 2px;
-          display: flex;
-          align-items: center; }
-          main .navbar-top .container-menu .container-list-menu .menu-profile > a .icon-gray {
-            display: none; }
-          main .navbar-top .container-menu .container-list-menu .menu-profile > a .icon-white {
-            display: block; }
-          main .navbar-top .container-menu .container-list-menu .menu-profile > a .name {
-            display: block;
-            color: white;
-            margin-left: 1rem; }
-  main .container-logo {
-    position: static;
-    margin-top: 1.5rem; }
-    main .container-logo > button {
-      display: inline-flex;
-      position: absolute;
-      top: 135px;
-      left: 14px; }
-    main .container-logo .container-list-nav {
-      display: none; } }
-
 .left-container-pay .wrapper-header {
   display: flex;
   justify-content: space-between;
@@ -942,6 +847,8 @@ main .container-logo {
   padding-bottom: 1rem;
   margin-bottom: 1.2rem;
   border-bottom: 1px solid #8f8f8f; }
+  .left-container-pay .wrapper-header > p {
+    font-weight: bold; }
   .left-container-pay .wrapper-header > span {
     display: flex;
     align-items: center; }
@@ -962,6 +869,7 @@ main .container-logo {
   .left-container-pay .wrapper-inputs .container-input {
     z-index: 2;
     width: 100%;
+    min-width: 255px;
     display: flex;
     padding: .6em 1em;
     align-items: center;
@@ -969,7 +877,7 @@ main .container-logo {
     border: 1px solid #4a4a4a; }
     .left-container-pay .wrapper-inputs .container-input > img {
       width: 22px; }
-    .left-container-pay .wrapper-inputs .container-input > input {
+    .left-container-pay .wrapper-inputs .container-input .input {
       width: 98%;
       margin-left: .5em; }
 
@@ -990,6 +898,7 @@ main .container-logo {
   margin-top: 1rem;
   z-index: 2;
   width: 100%;
+  min-width: 255px;
   display: flex;
   padding: .6em 1em;
   align-items: center;
@@ -997,7 +906,7 @@ main .container-logo {
   border: 1px solid #4a4a4a; }
   .left-container-pay .container-input-reference > img {
     width: 22px; }
-  .left-container-pay .container-input-reference > input {
+  .left-container-pay .container-input-reference .input {
     width: 98%;
     margin-left: .5em; }
 
@@ -1127,6 +1036,28 @@ main .container-logo {
       .bg-footer .whatsapp-chat {
         top: -8.5rem;
         right: 1.5rem; } }
+
+@media screen and (max-width: 568px) {
+  .left-container-pay .wrapper-header {
+    display: block; }
+    .left-container-pay .wrapper-header > p {
+      margin-bottom: 1rem; }
+    .left-container-pay .wrapper-header > span {
+      display: block; }
+      .left-container-pay .wrapper-header > span > button {
+        margin-left: 0;
+        margin-top: 1rem; }
+  .left-container-pay .wrapper-inputs {
+    grid-template-columns: 1fr;
+    row-gap: .9rem; }
+  .left-container-pay .wrapper-contact
+.container-input-reference {
+    align-items: flex-start;
+    height: 100px; }
+    .left-container-pay .wrapper-contact
+.container-input-reference > textarea {
+      height: 80px;
+      margin: .1rem 0; } }
 
 @use './modules/cta_whatsapp';
 .hero-about {
