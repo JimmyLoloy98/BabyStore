@@ -1,5 +1,6 @@
 /* Base */
 @import './base/reset';
+@import './base/mobile';
 
 /* Abstracts */
 @import './abstracts/variables';
@@ -8,13 +9,13 @@
 @import './modules/nav_menu';
 @import './modules/search';
 @import './modules/input_form';
-@import './modules/menu';
 @import './modules/card';
 @import './modules/card2';
 @import './modules/pagination';
 @import './modules/cta_whatsapp';
 @import './modules/flex_container';
 @import './modules/breadcrumb_api';
+@import './modules/footer';
 
 /* Layout */
 @import './layout/header';

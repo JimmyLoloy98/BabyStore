@@ -40,9 +40,7 @@ main{
     }
 
     tbody{
-
       tr{
-        
         td{
           padding: .8em 0;
           border-bottom: 1px solid $gray-50;
@@ -181,4 +179,46 @@ main{
     }
   }
 
+}
+
+@include mobile{
+  .left-container-pay{
+    table{
+      thead{ display: none; }
+
+      tbody{
+        tr{
+          td{
+            padding: 0;
+            border-bottom: 1px solid $gray-50;
+          }
+          .data1{
+            height: 110px;
+            align-items: center;
+            img{
+              height: 60px;
+              margin-right: .6em;
+              box-shadow: .1rem .1rem .5rem rgba(0,0,0,0.1), -.1rem -.1rem .5rem rgba(0,0,0,0.3);
+            }
+            p{
+              font-size: .8rem;
+            }
+          }
+          .data2{
+            font-size: .9rem;
+            font-weight: bold;
+          }
+          .data4{
+            > p{
+              font-size: 1rem;
+            }
+            .del-button{
+              font-size: .8rem;
+              padding: .3rem .5rem;
+            }
+          }
+        }
+      }
+    }
+  }
 }

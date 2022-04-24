@@ -1,10 +1,6 @@
-@use '../modules/nav_menu';
 @use '../modules/input_form';
 @use '../modules/flex_container';
-
-main{
-  @include nav_menu;
-}
+@use '../modules/footer';
 
 .left-container-pay{
 
@@ -15,6 +11,7 @@ main{
     padding-bottom: 1rem;
     margin-bottom: 1.2rem;
     border-bottom: 1px solid $gray-75;
+    > p{ font-weight: bold; }
 
     > span{
       display: flex;
@@ -103,5 +100,42 @@ main{
     padding-top: 1rem;
     padding-bottom: 2rem;
     border-top: 1px solid $gray-75;
+  }
+}
+
+.bg-footer{
+  @include footer;
+}
+
+@include mobile{
+  .left-container-pay{
+    .wrapper-header{
+      display: block;
+      > p{ margin-bottom: 1rem; }
+
+      > span{
+        display: block;
+        > button{
+          margin-left: 0;
+          margin-top: 1rem;
+        }
+      }
+    }
+
+    .wrapper-inputs{
+      grid-template-columns: 1fr;
+      row-gap: .9rem;
+    }
+
+    .wrapper-contact
+
+    .container-input-reference{
+      align-items: flex-start;
+      height: 100px;
+      > textarea{
+        height: 80px;
+        margin: .1rem 0;
+      }
+    }
   }
 }

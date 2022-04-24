@@ -3,12 +3,49 @@
     display: flex;
     justify-content: space-between;
     margin-top: 2rem;
+    
+    .container-menu{
+      z-index: 2;
+      
+      .container-list-menu{
+        display: flex;
+        gap: 1.2em;
+
+        .icon-white{
+          display: none;
+        }
+        .name{
+          display: none;
+        }
+
+        .link-menu{
+          height: auto;
+          display: flex;
+          align-items: flex-start;
+
+          .sup{
+            position: relative;
+            left: -6px;
+            color: $white;
+            background-color: $pink-100;
+            padding: .3rem;
+            font-size: .6rem;
+            border-radius: 50%;
+            text-align: start;
+          }
+        }
+      }
+    }
   }
 
   .container-logo{
     text-align: center;
     position: relative;
     top: -3rem;
+
+    > button{
+      display: none;
+    }
 
     .image-logo-brand{
       width: 110px;
@@ -27,6 +64,84 @@
 
       a:focus{
         color: $pink-100;
+      }
+    }
+  }
+
+  @include mobile{
+    .navbar-top{
+
+      .container-menu{
+        width: 100%;
+
+        .container-list-menu{
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          text-align: center;
+          margin-top: 0;
+
+          .link-menu{
+            height: auto;
+            display: flex;
+            align-items: flex-start;
+
+            .sup{
+              position: relative;
+              left: -6px;
+              color: $white;
+              background-color: $pink-100;
+              padding: .3rem;
+              font-size: .6rem;
+              border-radius: 50%;
+              text-align: start;
+            }
+          }
+
+          .menu-profile{
+            min-width: 140px;
+            width: 160px;
+            background-color: $pink-100;
+            border-radius: 20px;
+
+            > a{
+              position: relative;
+              top: 2px;
+              left: 2px;
+              display: flex;
+              align-items: center;
+
+              .icon-gray{
+                display: none;
+              }
+              .icon-white{
+                display: block;
+              }
+
+              .name{
+                display: block;
+                color: $white;
+                margin-left: 1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .container-logo{
+      position: static;
+      margin-top: 1.5rem;
+
+      > button{
+        display: inline-flex;
+        position: absolute;
+        top: 135px;
+        left: 14px;
+      }
+
+      .container-list-nav{
+        display: none;
       }
     }
   }

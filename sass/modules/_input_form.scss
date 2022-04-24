@@ -1,6 +1,7 @@
 @mixin input_form{
   z-index: 2;
   width: 100%;
+  min-width: 255px;
   display: flex;
   padding: .6em 1em;
   align-items: center;
@@ -11,7 +12,7 @@
     width: 22px;
   }
   
-  > input{
+  .input{
     width: 98%;
     margin-left: .5em;
   }

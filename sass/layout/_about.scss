@@ -14,10 +14,12 @@
     flex-direction: column;
     gap: 1.8rem;
     box-shadow: .1rem .1rem .6rem rgba(0,0,0,0.1), -.1rem -.1rem .6rem rgba(0,0,0,0.1);
-    
+
+    h3{ font-weight: bold; }
+
     p{
       margin-top: .8rem;
-      font-size: $font-small;    
+      font-size: $font-small;
     }
   }
   
@@ -66,5 +68,43 @@
 
   .contact-right{
     @include cta_whatsapp(30%, 40%, space-between);
+  }
+}
+
+@include mobile{
+  .hero-about{
+    display: block;
+    margin: 2rem 0;
+
+    .header-left{
+      width: 100%;
+      padding: 1.2rem 1.6rem;
+
+      h3{ font-size: 1rem; }
+    }
+
+    .header-right{ display: none; }
+  }
+
+  .contact-about{
+    display: block;
+    margin: 2rem 0;
+
+    .contact-left{
+      width: 100%;
+      padding: 1.2rem 1.6rem;
+      h3{
+        font-size: 1rem;
+      }
+      .info-contact{
+        a, address{
+
+        }font-size: .8rem;
+      }
+    }
+
+    .contact-right{ 
+      display: none;
+    }
   }
 }

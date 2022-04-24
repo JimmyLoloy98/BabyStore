@@ -4,17 +4,32 @@
   padding-top: 0;
   list-style: none;
 }
-
 html{
   font-family: 'Comfortaa', cursive;
 }
-
 body{
+  padding: 0;
+  margin: 0;
+}
+.body{
   padding: 0 3rem;
 }
 a{
   text-decoration: none;
   color: #000;
+}
+details{
+  outline: none;
+}
+ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+li{
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 button{
   font-family: 'Comfortaa', cursive;
@@ -24,13 +39,26 @@ button{
   outline: none;
 }
 input{
+  font-size: .9rem;
   outline: none;
   border: none;
   background-color: transparent;
 }
 textarea{
+  font-size: .9rem;
   outline: none;
+  border: none;
+  background-color: transparent;
 }
 ::placeholder{
   font-family: 'Comfortaa', cursive;
+}
+
+@media screen and (max-width: 768px){
+  .body{
+    padding: 0 1rem;
+  }
+  footer{
+    margin: 0 1rem;
+  }
 }
