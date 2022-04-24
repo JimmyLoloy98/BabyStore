@@ -1694,7 +1694,7 @@ main .container-logo {
 
 .details {
   border-bottom: 1px solid #8f8f8f;
-  margin-top: 1.5rem;
+  margin-top: .5rem;
   padding-bottom: 1.5rem; }
   .details .summary {
     display: flex;
