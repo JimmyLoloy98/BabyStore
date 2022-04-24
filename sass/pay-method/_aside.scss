@@ -1,89 +1,104 @@
-aside{
-    width: 30%;
-    background: $pink-50;
-    height: auto;
-    float: left;
-    margin-top: 26.25rem;
-    box-shadow: 0.1rem 0.01rem 0.01rem 0.3rem rgba(1, 1, 1, 0.1);
+aside {
+  width: 30%;
+  background: $pink-50;
+  height: auto;
+  float: left;
+  margin-top: 26.25rem;
+  box-shadow: 0.1rem 0.01rem 0.01rem 0.3rem rgba(1, 1, 1, 0.1);
 }
+
 table {
-    width: 97%;
-    margin-left: 0.7rem;
-    margin-right: 0.8rem;
+  width: 97%;
+  margin-left: 0.7rem;
+  margin-right: 0.8rem;
+  font-size: 1.3rem;
+  padding: 0.7rem;
+
+  .title {
+    text-align: center;
     font-size: 1.3rem;
-    padding: 0.7rem;
-    .title{
-        text-align: center;
-        font-size: 1.3rem; 
-    }  
+  }
 }
-thead{
-    padding: 0.2rem;
-    margin: 0.3rem;
-    height: 4rem;
-    .head1{
-        text-align: start;
-        font-weight: normal;
-        border-bottom: 1px solid $black;
-        .head2{
-            text-align: end;
-            width: 30%;
-            font-weight: normal;
-            border-bottom: 1px solid $black;
-        }
-    }
-}
-.conteiner3{
-    font-size: 1.3rem;
-    height: 3.5rem;
-    .price{
-        text-align: end;
-        font-size: 1.3rem;
-        .cover{
-            font-size: 1rem;
-            .price1{
-                text-align: end;
-                color: $pink-100;
-                font-size: 1.6rem;
-                font-weight: normal;
-            .price2{
-                text-align: end;
-                color: $pink-100;
-                font-size: 1.3rem;
-            }
-            }
-        }
-    }
-}
-.conteiner4{
+
+thead {
+  padding: 0.2rem;
+  margin: 0.3rem;
+  height: 4rem;
+
+  .head1 {
     text-align: start;
     font-weight: normal;
-    height: 4rem;
-    .price1{
+    border-bottom: 1px solid $black;
+
+    .head2 {
+      text-align: end;
+      width: 30%;
+      font-weight: normal;
+      border-bottom: 1px solid $black;
+    }
+  }
+}
+
+.conteiner3 {
+  font-size: 1.3rem;
+  height: 3.5rem;
+
+  .price {
+    text-align: end;
+    font-size: 1.3rem;
+
+    .cover {
+      font-size: 1rem;
+
+      .price1 {
         text-align: end;
         color: $pink-100;
         font-size: 1.6rem;
-         font-weight: normal;
-    }
-}
-.button-pay{
-    position: relative;
-    .button{
-        background-color: $pink-100;
-        border-radius: 0 0 1.3rem 0;
-        padding: .4rem 1rem;
-        color: $white;
-        font-size: 1.3rem;
-        font-weight: 40;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 1.7rem;
-        border: none;
-        svg{
-            width: 2rem;
-            margin-right: .6rem;
+        font-weight: normal;
+
+        .price2 {
+          text-align: end;
+          color: $pink-100;
+          font-size: 1.3rem;
         }
+      }
     }
+  }
+}
+
+.conteiner4 {
+  text-align: start;
+  font-weight: normal;
+  height: 4rem;
+
+  .price1 {
+    text-align: end;
+    color: $pink-100;
+    font-size: 1.6rem;
+    font-weight: normal;
+  }
+}
+
+.button-pay {
+  position: relative;
+
+  .button {
+    background-color: $pink-100;
+    border-radius: 0 0 1.3rem 0;
+    padding: .4rem 1rem;
+    color: $white;
+    font-size: 1.3rem;
+    font-weight: 40;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.7rem;
+    border: none;
+
+    svg {
+      width: 2rem;
+      margin-right: .6rem;
+    }
+  }
 }
