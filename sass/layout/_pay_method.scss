@@ -1,0 +1,56 @@
+.details{
+	border-bottom: 1px solid $gray-75;
+	margin-top: .5rem;
+	padding-bottom: 1.5rem;
+
+	.summary{
+		display: flex; 
+		align-items: center; 
+		gap: .5rem;
+	}
+
+	.pay-method{
+		margin-top: 1.5rem;
+		margin-left: 1.5rem;
+
+		.images-method{
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-start;
+			margin-bottom: 1rem;
+
+			> figure{
+				> figcaption{
+					margin-top: .4rem;
+					color: $gray-100;
+				}
+			}
+		}
+	}
+}
+
+@include mobile{
+	.details{
+		.pay-method{
+			margin-top: 1rem;
+			margin-left: 0;
+
+			.images-method{
+				> figure{
+					> img{
+						width: 190px;
+					}
+					
+					> figcaption{
+						p{
+							font-size: .8rem;
+							> span{
+								font-size: .9rem;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

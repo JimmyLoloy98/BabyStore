@@ -1,4 +1,5 @@
 @mixin cart_dialog {
+  // z-index: 99999 !important;
   height: 100%;
   width: 0;
   position: fixed;

@@ -1,0 +1,44 @@
+.conteiner {
+	height: 70vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 2rem;
+	
+	.text {
+		display: block;
+		font-size: 2.2rem;
+		text-align: center;
+	}
+	
+	.button {
+		display: block;
+		padding: .8rem;
+		margin: 1.5rem 0;
+		background-color: $pink-100;
+		border-radius: 0 0 20px 0;
+		width: 10rem;
+		color: $white;
+	}
+
+	.mother-image{
+		height: 50vh;
+	}
+}
+
+@include mobile{
+	.conteiner{
+		height: auto;
+		width: 94vw;
+
+		.text{
+			font-size: 1.6rem;
+			text-align: center;
+		}
+		
+		.mother-image{
+			height: 100%;
+			width: 80%;
+		}
+	}
+}

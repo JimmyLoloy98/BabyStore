@@ -1,0 +1,108 @@
+@use '../modules/input_form';
+
+@mixin input-file {
+	.inputfile {
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+		
+		& + label {
+			border-radius: 20px;
+			cursor: pointer;
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			gap: .5rem;
+			overflow: hidden;
+			padding: 0.5rem 1rem;
+		}
+	}
+	.inputfile-2 + label {
+		color: $gray-100;
+		border: 1px solid currentColor;
+	}
+
+	.iborrainputfile{ 
+		font-size: .9rem; 
+		color: $gray-75;
+	}
+}
+
+.wrapper-send-voucher{
+	display: flex;
+	justify-content: center;
+	gap: 3rem;
+
+	.container-left-up{
+		padding: 1rem;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		
+		.container-form-upload{
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			border-radius: 20px;
+			gap: 1rem;
+			padding: 1.5rem 1rem;
+			background-color: $white;
+			box-shadow: .1rem .1rem .6rem rgba(0,0,0,0.1), -.1rem -.1rem .6rem rgba(0,0,0,0.1);
+			text-align: center;
+
+			.file-upload{
+				@include input-file;
+				max-width: 300px;
+				background-color: $gray-25;
+				border-radius: 20px;
+
+				&:hover{
+					border-radius: 20px;
+					background-color: $gray-50;
+				}
+			}
+
+			> sub{
+				font-size: .8rem;
+				color: $gray-100;
+			}
+		}
+
+		> button{
+			margin-top: 1.2rem;
+			background-color: $pink-100;
+			border-radius: 0 0 20px 0;
+			padding: .8rem 1.5rem;
+			color: $white;
+		}
+	}
+
+	.container-right-up{
+		padding: 1rem;
+		display: flex;
+		flex-direction: column;
+		// justify-content: space-between;
+		align-items: center;
+		gap: 1.2rem;
+
+		> img{
+			width: 100px;
+		}
+
+		> button{
+			background-color: $pink-100;
+			border-radius: 0 0 20px 0;
+			padding: .8rem 1.5rem;
+			color: $white;
+		}
+	}
+}
+
+.container-input{
+	@include input_form;
+
+	> input{
+		margin-left: .4rem;
+	}
+}
