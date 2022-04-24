@@ -1073,6 +1073,8 @@ textarea {
     flex-direction: column;
     gap: 1.8rem;
     box-shadow: 0.1rem 0.1rem 0.6rem rgba(0, 0, 0, 0.1), -0.1rem -0.1rem 0.6rem rgba(0, 0, 0, 0.1); }
+    .hero-about .header-left h3 {
+      font-weight: bold; }
     .hero-about .header-left p {
       margin-top: .8rem;
       font-size: 0.8rem; }
@@ -1127,6 +1129,30 @@ textarea {
         font-weight: 600;
         width: 10rem;
         margin-top: .5rem; }
+
+@media screen and (max-width: 568px) {
+  .hero-about {
+    display: block;
+    margin: 2rem 0; }
+    .hero-about .header-left {
+      width: 100%;
+      padding: 1.2rem 1.6rem; }
+      .hero-about .header-left h3 {
+        font-size: 1rem; }
+    .hero-about .header-right {
+      display: none; }
+  .contact-about {
+    display: block;
+    margin: 2rem 0; }
+    .contact-about .contact-left {
+      width: 100%;
+      padding: 1.2rem 1.6rem; }
+      .contact-about .contact-left h3 {
+        font-size: 1rem; }
+      .contact-about .contact-left .info-contact {
+        font-size: .8rem; }
+    .contact-about .contact-right {
+      display: none; } }
 
 @use './modules/cta_whatsapp';
 #hero-contact {
