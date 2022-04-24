@@ -1659,3 +1659,35 @@ main .container-logo {
   .left-container-pay table tbody tr .data4 .del-button {
     font-size: .8rem;
     padding: .3rem .5rem; } }
+
+.conteiner {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem; }
+  .conteiner .text {
+    display: block;
+    font-size: 2.2rem;
+    text-align: center; }
+  .conteiner .button {
+    display: block;
+    padding: .8rem;
+    margin: 1.5rem 0;
+    background-color: #ea4d84;
+    border-radius: 0 0 20px 0;
+    width: 10rem;
+    color: white; }
+  .conteiner .mother-image {
+    height: 50vh; }
+
+@media screen and (max-width: 568px) {
+  .conteiner {
+    height: auto;
+    width: 94vw; }
+    .conteiner .text {
+      font-size: 1.6rem;
+      text-align: center; }
+    .conteiner .mother-image {
+      height: 100%;
+      width: 80%; } }
