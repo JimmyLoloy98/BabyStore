@@ -262,9 +262,17 @@
 </div>
 </body>
 <script>
+  var sidenav = window.matchMedia("(max-width: 568px)")
+  closeNav(sidenav)
+  sidenav.addListener(closeNav)
+
   function openNav() {
-    document.getElementById("mySidenav").style.width = "550px";
-    document.body.style.backgroundColor = "rgba(0,0,0,0.6)";
+    if (sidenav.matches) {
+      document.getElementById("mySidenav").style.width = "100%";
+    } else{
+      document.getElementById("mySidenav").style.width = "550px";
+      document.body.style.backgroundColor = "rgba(0,0,0,0.6)";
+    }
   }
 
   function closeNav() {
