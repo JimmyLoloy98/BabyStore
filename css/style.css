@@ -1691,3 +1691,34 @@ main .container-logo {
     .conteiner .mother-image {
       height: 100%;
       width: 80%; } }
+
+.details {
+  border-bottom: 1px solid #8f8f8f;
+  margin-top: 1.5rem;
+  padding-bottom: 1.5rem; }
+  .details .summary {
+    display: flex;
+    align-items: center;
+    gap: .5rem; }
+  .details .pay-method {
+    margin-top: 1.5rem;
+    margin-left: 1.5rem; }
+    .details .pay-method .images-method {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      margin-bottom: 1rem; }
+      .details .pay-method .images-method > figure > figcaption {
+        margin-top: .4rem;
+        color: #4a4a4a; }
+
+@media screen and (max-width: 568px) {
+  .details .pay-method {
+    margin-top: 1rem;
+    margin-left: 0; }
+    .details .pay-method .images-method > figure > img {
+      width: 190px; }
+    .details .pay-method .images-method > figure > figcaption p {
+      font-size: .8rem; }
+      .details .pay-method .images-method > figure > figcaption p > span {
+        font-size: .9rem; } }
