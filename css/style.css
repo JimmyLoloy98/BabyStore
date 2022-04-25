@@ -19,6 +19,10 @@ a {
   text-decoration: none;
   color: #000; }
 
+figure {
+  margin: 0;
+  padding: 0; }
+
 details {
   outline: none; }
 
@@ -1492,6 +1496,9 @@ main .container-logo {
   display: flex;
   justify-content: center;
   align-items: center; }
+  @media screen and (max-width: 568px) {
+    .breadcrumb-api {
+      margin-top: 1.5rem; } }
 
 .flex-container {
   margin-top: 3rem;
@@ -1743,6 +1750,22 @@ main .container-logo {
       background-color: white;
       box-shadow: 0.1rem 0.1rem 0.6rem rgba(0, 0, 0, 0.1), -0.1rem -0.1rem 0.6rem rgba(0, 0, 0, 0.1);
       text-align: center; }
+      .wrapper-send-voucher .container-left-up .container-form-upload .container-input {
+        z-index: 2;
+        width: 100%;
+        min-width: 255px;
+        display: flex;
+        padding: .6em 1em;
+        align-items: center;
+        border-radius: 20px;
+        border: 1px solid #4a4a4a; }
+        .wrapper-send-voucher .container-left-up .container-form-upload .container-input > img {
+          width: 22px; }
+        .wrapper-send-voucher .container-left-up .container-form-upload .container-input .input {
+          width: 98%;
+          margin-left: .5em; }
+        .wrapper-send-voucher .container-left-up .container-form-upload .container-input > input {
+          margin-left: .4rem; }
       .wrapper-send-voucher .container-left-up .container-form-upload .file-upload {
         max-width: 300px;
         background-color: #e6e6e6;
@@ -1793,19 +1816,19 @@ main .container-logo {
       padding: .8rem 1.5rem;
       color: white; }
 
-.container-input {
-  z-index: 2;
-  width: 100%;
-  min-width: 255px;
-  display: flex;
-  padding: .6em 1em;
-  align-items: center;
-  border-radius: 20px;
-  border: 1px solid #4a4a4a; }
-  .container-input > img {
-    width: 22px; }
-  .container-input .input {
-    width: 98%;
-    margin-left: .5em; }
-  .container-input > input {
-    margin-left: .4rem; }
+.bank-counts {
+  margin-top: 2.5rem; }
+  .bank-counts > figure {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1.5rem; }
+
+@media screen and (max-width: 568px) {
+  .wrapper-send-voucher {
+    flex-direction: column; }
+    .wrapper-send-voucher .container-left-up {
+      align-items: center; }
+  .bank-counts > figure {
+    margin-top: 1rem;
+    gap: .8rem;
+    overflow-x: auto; } }

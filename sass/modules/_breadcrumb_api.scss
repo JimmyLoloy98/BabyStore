@@ -5,4 +5,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @include mobile{
+    margin-top: 1.5rem;
+  }
 }
