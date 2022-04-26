@@ -527,8 +527,7 @@ textarea {
       #categories-products .container-aside-left .container-elephant-image {
         display: none; }
     #categories-products .container-aside-right {
-      width: 100%;
-      display: block; }
+      width: 100%; }
       #categories-products .container-aside-right .container-header-accesories {
         flex-direction: column;
         align-items: center;
@@ -538,20 +537,25 @@ textarea {
           font-size: medium; }
       #categories-products .container-aside-right .container-accesories-cards {
         display: grid;
-        grid-template-columns: repeat(2, minmax(220px, 1fr));
+        grid-template-columns: repeat(2, minmax(140px, 1fr));
         column-gap: 8px;
         row-gap: 16px;
         margin-top: 1rem; }
         #categories-products .container-aside-right .container-accesories-cards .card-item-accesories .card-description {
           margin-top: .8rem; }
           #categories-products .container-aside-right .container-accesories-cards .card-item-accesories .card-description > h3 {
-            font-size: 1rem; }
+            font-weight: bold;
+            font-size: .95rem; }
           #categories-products .container-aside-right .container-accesories-cards .card-item-accesories .card-description > span {
             font-size: small; }
           #categories-products .container-aside-right .container-accesories-cards .card-item-accesories .card-description .card-footer {
-            margin-top: 1rem; }
+            margin-top: .8rem; }
             #categories-products .container-aside-right .container-accesories-cards .card-item-accesories .card-description .card-footer > span {
-              font-size: 1rem; } }
+              font-size: .8rem; }
+            #categories-products .container-aside-right .container-accesories-cards .card-item-accesories .card-description .card-footer > button {
+              padding: .5rem .5rem;
+              border-radius: 0 0 14px 0;
+              font-size: .8rem; } }
 
 @use '../modules/nav_menu';
 @use '../modules/pagination';
