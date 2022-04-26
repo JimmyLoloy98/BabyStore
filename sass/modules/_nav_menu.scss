@@ -43,7 +43,7 @@
     position: relative;
     top: -3rem;
 
-    > button{
+    .button-menu-burguer{
       display: none;
     }
 
@@ -70,7 +70,6 @@
 
   @include mobile{
     .navbar-top{
-
       .container-menu{
         width: 100%;
 
@@ -133,11 +132,70 @@
       position: static;
       margin-top: 1.5rem;
 
-      > button{
-        display: inline-flex;
+      .button-menu-burguer {
+        display: block;
         position: absolute;
-        top: 135px;
-        left: 14px;
+        width: 140px;
+        top: 125px;
+        /*z-index: 3;*/
+        .menu-btn {
+          display: none;
+          &:checked ~ .menu { max-height: 160px; }
+          &:checked ~ .menu-icon .navicon { 
+            background: transparent;
+            &:before { transform: rotate(-45deg); }
+            &:after { transform: rotate(45deg); }
+          }
+          &:checked ~ .menu-icon:not(.steps) .navicon:before,
+          &:checked ~ .menu-icon:not(.steps) .navicon:after { top: 0; }
+        }
+        
+        .menu-icon {
+          cursor: pointer;
+          float: left;
+          padding: 22px 14px;
+          position: relative;
+          user-select: none;
+          background-color: $pink-50;
+      
+          .navicon {
+            background: #000;
+            display: block;
+            height: 2px;
+            position: relative;
+            transition: background .2s ease-out;
+            width: 22px;
+      
+            &:before, &:after {
+              background: #333;
+              content: '';
+              display: block;
+              height: 100%;
+              position: absolute;
+              transition: all .2s ease-out;
+              width: 100%;
+            }
+            &:before{ top: 5px; }
+            &:after{ top: -5px; }
+          }
+        }
+        
+        .menu {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          overflow: hidden;
+          background-color: $pink-50;
+          clear: both;
+          max-height: 0;
+          transition: max-height .2s ease-out;
+          li a {
+            display: block;
+            padding: 12px 20px;
+            text-decoration: none;
+          }
+        }
+        li a:hover, .menu-btn:hover { background-color: pink; }
       }
 
       .container-list-nav{
