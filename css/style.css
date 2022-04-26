@@ -764,34 +764,6 @@ textarea {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between; }
-    .wrapper-product .wrapper-images-product .wrapper-left {
-      max-width: 20%;
-      max-height: 550px;
-      min-height: 550px;
-      overflow-y: auto;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      gap: .5rem; }
-      .wrapper-product .wrapper-images-product .wrapper-left::-webkit-scrollbar {
-        display: none; }
-      .wrapper-product .wrapper-images-product .wrapper-left .background-image {
-        box-shadow: 0.1rem 0.1rem 0.6rem rgba(0, 0, 0, 0.2), -0.1rem -0.1rem 0.6rem rgba(0, 0, 0, 0.2);
-        padding: .3rem;
-        width: 100%; }
-        .wrapper-product .wrapper-images-product .wrapper-left .background-image .image-product {
-          width: 100%;
-          height: 100%;
-          object-fit: cover; }
-    .wrapper-product .wrapper-images-product .wrapper-right {
-      min-width: 80%; }
-      .wrapper-product .wrapper-images-product .wrapper-right .background-image {
-        box-shadow: 0.1rem 0.1rem 0.6rem rgba(0, 0, 0, 0.2), -0.1rem -0.1rem 0.6rem rgba(0, 0, 0, 0.2);
-        padding: .3rem;
-        margin-left: .5rem; }
-        .wrapper-product .wrapper-images-product .wrapper-right .background-image .image-product {
-          width: 100%;
-          object-fit: cover; }
   .wrapper-product .wrapper-details-product {
     width: 50%; }
     .wrapper-product .wrapper-details-product .container-details {
@@ -1181,7 +1153,7 @@ textarea {
   width: 100%; }
   .hero-about .header-left {
     background-color: #fffafb;
-    padding: 1.6rem 2.5rem;
+    padding: 2.5rem 2.5rem;
     width: 70%;
     display: flex;
     flex-direction: column;
@@ -1191,7 +1163,7 @@ textarea {
       font-weight: bold; }
     .hero-about .header-left p {
       margin-top: .8rem;
-      font-size: 0.8rem; }
+      font-size: 1rem; }
   .hero-about .header-right {
     width: 30%;
     background-color: #fde8ee;
@@ -1253,6 +1225,8 @@ textarea {
       padding: 1.2rem 1.6rem; }
       .hero-about .header-left h3 {
         font-size: 1rem; }
+      .hero-about .header-left p {
+        font-size: .85rem; }
     .hero-about .header-right {
       display: none; }
   .contact-about {
