@@ -901,6 +901,8 @@ textarea {
     width: 100%; }
     .wrapper-product .wrapper-images-product .splide {
       margin: 0 auto 0; }
+    .wrapper-product .wrapper-images-product .thumbnails {
+      display: none; }
   .wrapper-product .wrapper-details-product {
     width: 100%;
     padding-bottom: 1rem; }
