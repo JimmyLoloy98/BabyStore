@@ -411,7 +411,7 @@ textarea {
         padding: 1rem 0;
         text-align: center; }
         #categories-products .container-aside-left details summary > img {
-          display: none; }
+          margin-left: .4rem; }
       #categories-products .container-aside-left details .categories-list {
         display: flex;
         margin-top: .6rem;
